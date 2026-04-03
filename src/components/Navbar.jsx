@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
   <nav className="fixed w-full top-0 z-50" style={{ background: '#1a1a2e' }}>
     
-    <div className="max-w-9xl mx-auto flex items-stretch">
+    <div className="max-w-xxl mx-auto flex items-stretch">
 
       {/* LEFT SIDE LOGO */}
       <div className="flex items-center px-6">
@@ -115,7 +115,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center px-6 py-3">
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center gap-16 ">
+          <div className="hidden md:flex items-center gap-12 ">
 
             {navLinks.map((link) => (
               <div key={link.name} className="relative">
