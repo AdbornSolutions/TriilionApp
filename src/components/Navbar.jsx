@@ -124,15 +124,16 @@ const Navbar = () => {
                   <>
                     <button
                       onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
-                      className="flex items-center gap-1 text-sm font-medium"
+                      className="flex items-center gap-1 font-medium"
                       style={{
+                        fontSize: '18px',
                         color: location.pathname.includes('/services') ? '#a78bfa' : '#ccc',
                         background: 'none',
                         border: 'none'
                       }}
                     >
                       Services
-                      <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                         <path d="M6 9l6 6 6-6"/>
                       </svg>
                     </button>
@@ -150,7 +151,8 @@ const Navbar = () => {
                           <Link
                             key={service.name}
                             to={service.path}
-                            className="block px-4 py-2 text-sm text-[#bbb] hover:text-white hover:bg-[#2a2a44]"
+                            className="block px-4 py-2 text-[#bbb] hover:text-white hover:bg-[#2a2a44]"
+                            style={{ fontSize: '15px' }}
                           >
                             {service.name}
                           </Link>
@@ -162,8 +164,9 @@ const Navbar = () => {
                 ) : (
                   <Link
                     to={link.path}
-                    className="text-sm font-medium"
+                    className="font-medium"
                     style={{
+                      fontSize: '18px',
                       color: location.pathname === link.path ? '#a78bfa' : '#ccc'
                     }}
                   >
@@ -179,8 +182,11 @@ const Navbar = () => {
           {/* Contact Button */}
           <Link
             to="/contact"
-            className="hidden md:block text-sm font-semibold text-white px-5 py-2.5 rounded-lg"
-            style={{ background: '#6c5ce7' }}
+            className="hidden md:block font-semibold text-white px-6 py-3 rounded-lg"
+            style={{ 
+              background: '#6c5ce7',
+              fontSize: '18px'
+            }}
           >
             Contact Us
           </Link>
