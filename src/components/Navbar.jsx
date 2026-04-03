@@ -115,7 +115,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center px-6 py-3">
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-16 ">
 
             {navLinks.map((link) => (
               <div key={link.name} className="relative">
