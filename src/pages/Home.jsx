@@ -16,7 +16,7 @@ import logo8 from '../assets/company logos/WhatsApp-Image-2023-08-11-at-12.31.35
 import logo9 from '../assets/company logos/WhatsApp-Image-2023-08-11-at-12.31.35-PM-e1692794374252 1.png';
 import logo10 from '../assets/company logos/WhatsApp-Image-2023-08-11-at-12.31.36-PM-1-e1692794346474 1.png';
 import logo11 from '../assets/company logos/WhatsApp-Image-2023-08-11-at-12.31.36-PM-e1692794300278 1.png';
-
+import Aboutsection from '../components/Aboutsection.jsx';
 const Home = () => {
   return (
     <MainLayout>
@@ -67,66 +67,7 @@ const Home = () => {
   </div>
 </section>
 
-      {/* About Preview Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <SectionTitle
-                title="We're a Team of Passionate IT Professionals"
-                subtitle="With years of experience and a commitment to excellence, we deliver solutions that drive business growth."
-                centered={false}
-              />
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                At TrillionApp Technologies, we believe in the power of innovation and technology to transform businesses. 
-                Our team of skilled professionals is dedicated to delivering high-quality solutions that meet your unique needs.
-              </p>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                From web development to ERP systems, digital marketing to mobile apps, we offer comprehensive IT services 
-                that help you stay ahead in today's competitive landscape.
-              </p>
-              <Link
-                to="/about"
-                className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >
-                Learn More About Us
-              </Link>
-            </div>
-            <div className="relative">
-              <img
-                src="/assets/about-preview.jpg"
-                alt="About TrillionApp"
-                className="rounded-xl shadow-2xl w-full"
-              />
-              <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-indigo-500 to-purple-600 p-6 rounded-xl shadow-lg">
-                <div className="text-white text-3xl font-bold">6+</div>
-                <div className="text-white/90 text-sm">Years of Excellence</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-500 to-purple-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <StatCard
-                key={index}
-                number={stat.number}
-                label={stat.label}
-                icon={
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
-                }
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
+      <Aboutsection />
       {/* Services Overview */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
