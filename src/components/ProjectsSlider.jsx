@@ -5,20 +5,21 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import projectImage from '../assets/All/Rectangle 10 (3).png';
 
 const projects = [
-  { id: 1, title: "Smart Visions", category: "Design / Ideas", image: "/src/assets/All/Rectangle 10 (1).png" },
-  { id: 2, title: "Web Development", category: "Design / Ideas", image: "/src/assets/All/Rectangle 10 (1).png" },
-  { id: 3, title: "Tech Solutions", category: "Design / Ideas", image: "/src/assets/All/Rectangle 10 (1).png" },
-  { id: 4, title: "Smart Marketing", category: "Ideas", image: "/src/assets/All/Rectangle 10 (1).png" },
-  { id: 5, title: "Project 5", category: "Ideas", image: "/src/assets/All/Rectangle 10 (1).png" },
-  { id: 6, title: "Project 6", category: "Ideas", image: "/src/assets/All/Rectangle 10 (1).png" },
-  { id: 7, title: "Project 7", category: "Ideas", image: "/src/assets/All/Rectangle 10 (1).png" },
-  { id: 8, title: "Project 8", category: "Ideas", image: "/src/assets/All/Rectangle 10 (1).png" },
-  { id: 9, title: "Project 9", category: "Ideas", image: "/src/assets/All/Rectangle 10 (1).png" },
-  { id: 10, title: "Project 10", category: "Ideas", image: "/src/assets/All/Rectangle 10 (1).png" },
-  { id: 11, title: "Project 11", category: "Ideas", image: "/src/assets/All/Rectangle 10 (1).png" },
-  { id: 12, title: "Project 12", category: "Ideas", image: "/src/assets/All/Rectangle 10 (1).png" },
+  { id: 1, title: "Smart Visions", category: "Design / Ideas", image: projectImage },
+  { id: 2, title: "Web Development", category: "Design / Ideas", image: projectImage },
+  { id: 3, title: "Tech Solutions", category: "Design / Ideas", image: projectImage },
+  { id: 4, title: "Smart Marketing", category: "Ideas", image: projectImage },
+  { id: 5, title: "Project 5", category: "Ideas", image: projectImage },
+  { id: 6, title: "Project 6", category: "Ideas", image: projectImage },
+  { id: 7, title: "Project 7", category: "Ideas", image: projectImage },
+  { id: 8, title: "Project 8", category: "Ideas", image: projectImage },
+  { id: 9, title: "Project 9", category: "Ideas", image: projectImage },
+  { id: 10, title: "Project 10", category: "Ideas", image: projectImage },
+  { id: 11, title: "Project 11", category: "Ideas", image: projectImage },
+  { id: 12, title: "Project 12", category: "Ideas", image: projectImage },
 ];
 
 const ProjectsSlider = () => {
