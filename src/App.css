@@ -182,3 +182,37 @@
     border-right-color: var(--border);
   }
 }
+
+/* Custom Swiper Pagination - Dash Style */
+.custom-pagination {
+  .swiper-pagination-bullet {
+    width: 30px;
+    height: 4px;
+    background: #d1d5db;
+    border-radius: 2px;
+    opacity: 1;
+    transition: all 0.3s ease;
+    
+    &.swiper-pagination-bullet-active {
+      background: #7c3aed;
+      width: 40px;
+    }
+  }
+}
+
+/* Testimonials Slider Pagination - Dash Style */
+.testimonials-pagination {
+  .swiper-pagination-bullet {
+    width: 30px;
+    height: 4px;
+    background: #d1d5db;
+    border-radius: 2px;
+    opacity: 1;
+    transition: all 0.3s ease;
+    
+    &.swiper-pagination-bullet-active {
+      background: #7c3aed;
+      width: 40px;
+    }
+  }
+}

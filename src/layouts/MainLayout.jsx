@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import FooterCTA from '../components/FooterCTA';
 
 const MainLayout = ({ children }) => {
   const location = useLocation();
@@ -17,6 +18,7 @@ const MainLayout = ({ children }) => {
       <main className="flex-grow pt-20">
         {children}
       </main>
+      <FooterCTA />
       <Footer />
     </div>
   );

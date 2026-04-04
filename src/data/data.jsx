@@ -76,6 +76,45 @@ export const services = [
     ],
     image: '/assets/mobile-app.jpg',
   },
+  {
+  id: 'ui-ux-design',
+  title: 'UI/UX Designing',
+  description: 'Create modern, intuitive and visually appealing user interfaces that deliver seamless user experiences across all devices.',
+  icon: (
+    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+    </svg>
+  ),
+  features: [
+    'User Interface Design',
+    'User Experience Design',
+    'Wireframing',
+    'Prototyping',
+    'Responsive Design',
+    'Design Systems'
+  ],
+  image: '/assets/ui-ux-design.jpg',
+},
+
+// {
+//   id: 'data-analysis',
+//   title: 'Data Analysis',
+//   description: 'Gain valuable insights from your data with advanced analytics, dashboards, and data-driven decision making.',
+//   icon: (
+//     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 3v18M5 13l4-4 4 4 6-6" />
+//     </svg>
+//   ),
+//   features: [
+//     'Business Intelligence',
+//     'Data Visualization',
+//     'Predictive Analytics',
+//     'Dashboard Development',
+//     'Big Data Processing',
+//     'Reporting Systems'
+//   ],
+//   image: '/assets/data-analysis.jpg',
+// },
 ];
 
 export const stats = [

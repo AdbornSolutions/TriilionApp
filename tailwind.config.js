@@ -10,7 +10,7 @@ export default {
         'fadeIn': 'fadeIn 0.3s ease-in-out',
         'slideDown': 'slideDown 0.3s ease-out',
         'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'marquee': 'marquee 25s linear infinite',
+        'marquee': 'marquee 10s linear infinite',
       },
       keyframes: {
         fadeIn: {
