@@ -40,21 +40,23 @@ const ServicesSection = () => {
             style={{ position: 'relative' }}
             onMouseEnter={e => {
               const container = e.currentTarget;
-              const badgeBg = container.querySelector('.badge-hover-bg');
               const titleBg = container.querySelector('.title-hover-bg');
               const numberBadge = container.querySelector('.number-badge');
-              if (badgeBg) badgeBg.style.top = '0';
               if (titleBg) titleBg.style.bottom = '0';
-              if (numberBadge) numberBadge.style.color = '#6428cbff';
+              if (numberBadge) {
+                numberBadge.style.background = '#fcfcfcff';
+                numberBadge.style.color = '#6428cbff';
+              }
             }}
             onMouseLeave={e => {
               const container = e.currentTarget;
-              const badgeBg = container.querySelector('.badge-hover-bg');
               const titleBg = container.querySelector('.title-hover-bg');
               const numberBadge = container.querySelector('.number-badge');
-              if (badgeBg) badgeBg.style.top = '100%';
               if (titleBg) titleBg.style.bottom = '100%';
-              if (numberBadge) numberBadge.style.color = '#fff';
+              if (numberBadge) {
+                numberBadge.style.background = '#7c3aed';
+                numberBadge.style.color = '#fff';
+              }
             }}
           >
             <img
@@ -69,7 +71,7 @@ const ServicesSection = () => {
 
             {/* Number badge — bottom right corner of image */}
             <div
-              className="number-badge relative overflow-hidden transition-colors duration-500"
+              className="number-badge transition-colors duration-500"
               style={{
                 position: 'absolute',
                 bottom: 21,
@@ -86,14 +88,6 @@ const ServicesSection = () => {
                 zIndex: 2,
               }}
             >
-              <span
-                className="badge-hover-bg absolute left-0 w-full h-full transition-all duration-500"
-                style={{
-                  top: '100%',
-                  background: '#fcfcfcff',
-                  zIndex: -1,
-                }}
-              />
               {i + 1}
             </div>
 
