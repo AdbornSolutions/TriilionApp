@@ -175,8 +175,8 @@ const ServicesSection = () => {
 
             </div>
 
-           <div className="flex justify-center mt-16">
-  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+           <div className="flex justify-center items-center mt-12">
+  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 ">
 
     {services.map((service) => (
       <div
