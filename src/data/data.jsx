@@ -1,14 +1,11 @@
+import iconImg from '../assets/All/icon.png';
+
 export const services = [
   {
     id: 'digital-marketing',
     title: 'Digital Marketing',
     description: 'Boost your online presence with our comprehensive digital marketing strategies including SEO, social media, PPC, and content marketing.',
-    icon: (
-      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
-      </svg>
-    ),
+    icon: <img src={iconImg} alt="Digital Marketing" className="w-8 h-8" />,
     features: [
       'Search Engine Optimization (SEO)',
       'Social Media Marketing',
@@ -23,11 +20,7 @@ export const services = [
     id: 'erp-development',
     title: 'ERP Development',
     description: 'Streamline your business processes with custom Enterprise Resource Planning solutions tailored to your specific needs.',
-    icon: (
-      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H9.996M5 15H9.996M14.004 9H20M14.004 15H20M5 5h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z" />
-      </svg>
-    ),
+    icon: <img src={iconImg} alt="ERP Development" className="w-8 h-8" />,
     features: [
       'Custom ERP Solutions',
       'Module Integration',
@@ -42,11 +35,7 @@ export const services = [
     id: 'web-development',
     title: 'Web Development',
     description: 'Create powerful, scalable, and user-friendly web applications using modern technologies and best practices.',
-    icon: (
-      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>
-    ),
+    icon: <img src={iconImg} alt="Web Development" className="w-8 h-8" />,
     features: [
       'Custom Web Applications',
       'E-commerce Solutions',
@@ -61,11 +50,7 @@ export const services = [
     id: 'mobile-app',
     title: 'Mobile App Development',
     description: 'Build stunning mobile applications for iOS and Android platforms that deliver exceptional user experiences.',
-    icon: (
-      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: <img src={iconImg} alt="Mobile App Development" className="w-8 h-8" />,
     features: [
       'iOS App Development',
       'Android App Development',
@@ -80,11 +65,7 @@ export const services = [
   id: 'ui-ux-design',
   title: 'UI/UX Designing',
   description: 'Create modern, intuitive and visually appealing user interfaces that deliver seamless user experiences across all devices.',
-  icon: (
-    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-    </svg>
-  ),
+  icon: <img src={iconImg} alt="UI/UX Designing" className="w-8 h-8" />,
   features: [
     'User Interface Design',
     'User Experience Design',

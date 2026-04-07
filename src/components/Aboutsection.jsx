@@ -67,26 +67,37 @@ const AboutSection = () => {
               ))}
             </ul>
 
-            {/* Learn More — outlined */}
+            {/* Learn More — outlined with bottom-to-top hover */}
             <div>
               <Link
                 to="/about"
-                className="inline-block text-base font-semibold px-8 py-3.5 rounded-lg transition-all duration-200 hover:shadow-lg"
+                className="inline-block text-base font-semibold px-8 py-3.5 rounded-lg hover:shadow-lg relative overflow-hidden"
                 style={{
                   border: '2px solid #6366f1',
                   color: '#6366f1',
                   textDecoration: 'none',
-                  background: 'transparent',
+                  background: '#ffffff',
+                  zIndex: 1,
                 }}
                 onMouseEnter={e => {
-                  e.currentTarget.style.background = '#6366f1';
+                  const beforeEl = e.currentTarget.querySelector('.hover-bg');
+                  if (beforeEl) beforeEl.style.top = '0';
                   e.currentTarget.style.color = '#ffffff';
                 }}
                 onMouseLeave={e => {
-                  e.currentTarget.style.background = 'transparent';
+                  const beforeEl = e.currentTarget.querySelector('.hover-bg');
+                  if (beforeEl) beforeEl.style.top = '100%';
                   e.currentTarget.style.color = '#6366f1';
                 }}
               >
+                <span
+                  className="hover-bg absolute left-0 w-full h-full transition-all duration-500"
+                  style={{
+                    top: '100%',
+                    background: '#6366f1',
+                    zIndex: -1,
+                  }}
+                />
                 Learn More →
               </Link>
             </div>

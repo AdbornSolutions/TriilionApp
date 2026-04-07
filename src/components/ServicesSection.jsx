@@ -19,38 +19,118 @@ const ServicesSection = () => {
         <div className="bg-gray-100 h-56"></div>
 
         {/* FLOATING CARDS */}
-        <div className="absolute left-0 right-0 top-24 z-20">
-          <div className="max-w-5xl mx-auto px-6">
-            <div className="grid md:grid-cols-3 gap-6">
+<div className="absolute left-0 right-0 top-1 z-20">
+  <div className="max-w-5xl mx-auto px-4">
+    <div className="grid md:grid-cols-3 gap-8">
 
-              {[card1, card2, card3].map((img, i) => (
-                <div
-                  key={i}
-                  className="bg-white shadow-2xl rounded overflow-hidden relative"
-                >
-                  <img
-                    src={img}
-                    className="w-full h-48 object-cover"
-                  />
+      {[card1, card2, card3].map((img, i) => (
+        <div
+          key={i}
+          className="group"
+          style={{
+            borderRadius: 0,
+            boxShadow: '0 8px 32px rgba(0,0,0,0.35)',
+            position: 'relative',
+            cursor: 'pointer',
+          }}
+        >
+          {/* Image container */}
+          <div style={{ position: 'relative' }}>
+            <img
+              src={img}
+              style={{
+                width: '100%',
+                height: 220,
+                objectFit: 'cover',
+                display: 'block',
+              }}
+            />
 
-                  {/* number badge */}
-                  <div className="absolute top-3 right-3 bg-purple-600 text-white px-3 py-1 text-sm">
-                    {i + 1}
-                  </div>
+            {/* Number badge — bottom right corner of image */}
+            <div
+              className="group/badge relative overflow-hidden"
+              style={{
+                position: 'absolute',
+                bottom: 21,
+                right: 30,
+                background: '#7c3aed',
+                color: '#fff',
+                width: 38,
+                height: 38,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: 16,
+                fontWeight: 700,
+                zIndex: 2,
+              }}
+              onMouseEnter={e => {
+                const bgEl = e.currentTarget.querySelector('.badge-hover-bg');
+                if (bgEl) bgEl.style.top = '0';
+                e.currentTarget.style.color = '#6428cbff';
+              }}
+              onMouseLeave={e => {
+                const bgEl = e.currentTarget.querySelector('.badge-hover-bg');
+                if (bgEl) bgEl.style.top = '100%';
+                e.currentTarget.style.color = '#fff';
+              }}
+            >
+              <span
+                className="badge-hover-bg absolute left-0 w-full h-full transition-all duration-500"
+                style={{
+                  top: '100%',
+                  background: '#fcfcfcff',
+                  zIndex: -1,
+                }}
+              />
+              {i + 1}
+            </div>
 
-                  <div className="p-3 text-center font-semibold">
-                    {[
-                      "Innovative Solutions",
-                      "Global Connectivity",
-                      "Access to Information",
-                    ][i]}
-                  </div>
-                </div>
-              ))}
-
+            {/* Title label — centered, auto width, floating over bottom of image */}
+            <div
+              className="relative overflow-hidden"
+              style={{
+                position: 'absolute',
+                bottom: -20,
+                left: '50%',
+                transform: 'translateX(-50%)',
+                background: '#fff',
+                color: '#0f0a1e',
+                fontWeight: 700,
+                fontSize: 14,
+                padding: '10px 59px',
+                whiteSpace: 'nowrap',
+                boxShadow: '0 2px 12px rgba(0,0,0,0.20)',
+                zIndex: 1,
+              }}
+              onMouseEnter={e => {
+                const bgEl = e.currentTarget.querySelector('.title-hover-bg');
+                if (bgEl) bgEl.style.top = '0';
+                e.currentTarget.style.color = '#fff';
+              }}
+              onMouseLeave={e => {
+                const bgEl = e.currentTarget.querySelector('.title-hover-bg');
+                if (bgEl) bgEl.style.top = '100%';
+                e.currentTarget.style.color = '#0f0a1e';
+              }}
+            >
+              <span
+                className="title-hover-bg absolute left-0 w-full h-full transition-all duration-500"
+                style={{
+                  top: '100%',
+                  background: '#7c3aed',
+                  zIndex: -1,
+                }}
+              />
+              {['Innovative Solutions', 'Global Connectivity ', 'Access to Information'][i]}
             </div>
           </div>
         </div>
+      ))}
+
+    </div>
+  </div>
+</div>
 
         {/* PURPLE SECTION */}
         <div className="relative bg-[#1a0f2e] pt-40 pb-24 overflow-hidden">
@@ -106,11 +186,59 @@ const ServicesSection = () => {
     {services.map((service) => (
       <div
         key={service.id}
-        className="relative bg-[#1a0f2e] text-center pt-14 pb-8 px-6 hover:bg-[#2a1a4e] transition-all duration-300"
+        className="relative text-center pt-14 pb-9 px-6"
+        style={{
+          background: '#1a0f2e',
+          zIndex: 0,
+        }}
+        onMouseEnter={e => {
+          const bgEl = e.currentTarget.querySelector('.service-hover-bg');
+          if (bgEl) {
+            bgEl.style.transform = 'scaleX(1) scaleY(1)';
+            bgEl.style.opacity = '1';
+          }
+          const titleEl = e.currentTarget.querySelector('h3');
+          if (titleEl) titleEl.style.color = '#000000';
+          const descEl = e.currentTarget.querySelector('p');
+          if (descEl) descEl.style.color = '#000000';
+          const iconEl = e.currentTarget.querySelector('.icon-circle');
+          if (iconEl) {
+            iconEl.style.background = '#ffffff';
+            iconEl.style.borderColor = '#000000';
+            iconEl.style.color = '#000000';
+          }
+        }}
+        onMouseLeave={e => {
+          const bgEl = e.currentTarget.querySelector('.service-hover-bg');
+          if (bgEl) {
+            bgEl.style.transform = 'scaleX(0) scaleY(0)';
+            bgEl.style.opacity = '0';
+          }
+          const titleEl = e.currentTarget.querySelector('h3');
+          if (titleEl) titleEl.style.color = '#ffffff';
+          const descEl = e.currentTarget.querySelector('p');
+          if (descEl) descEl.style.color = '#9ca3af';
+          const iconEl = e.currentTarget.querySelector('.icon-circle');
+          if (iconEl) {
+            iconEl.style.background = '#1a0f2e';
+            iconEl.style.borderColor = '#a855f7';
+            iconEl.style.color = '#c084fc';
+          }
+        }}
       >
+        <span
+          className="service-hover-bg absolute inset-0 w-full h-full transition-all duration-500 ease-out"
+          style={{
+            background: '#ffffff',
+            zIndex: -1,
+            transform: 'scaleX(0) scaleY(0)',
+            transformOrigin: 'bottom left',
+            opacity: 0,
+          }}
+        />
 
         {/* Icon Circle */}
-        <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 bg-[#1a0f2e] border border-purple-500 rounded-full flex items-center justify-center text-purple-400 text-3xl shadow-lg">
+        <div className="icon-circle absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 bg-[#1a0f2e] border border-purple-500 rounded-full flex items-center justify-center text-purple-400 text-3xl shadow-lg transition-all duration-500" style={{ zIndex: 2 }}>
           {service.icon}
         </div>
 
@@ -207,8 +335,32 @@ const ServicesSection = () => {
         <div className="hidden md:block">
           <Link
             to="/contact"
-            className="bg-white text-gray-800 px-6 py-3 font-semibold hover:shadow-lg transition"
+            className="relative inline-block px-6 py-3 font-semibold hover:shadow-lg overflow-hidden"
+            style={{
+              background: '#ffffff',
+              color: '#1f2937',
+              textDecoration: 'none',
+              zIndex: 1,
+            }}
+            onMouseEnter={e => {
+              const bgEl = e.currentTarget.querySelector('.btn-hover-bg');
+              if (bgEl) bgEl.style.top = '0';
+              e.currentTarget.style.color = '#ffffff';
+            }}
+            onMouseLeave={e => {
+              const bgEl = e.currentTarget.querySelector('.btn-hover-bg');
+              if (bgEl) bgEl.style.top = '100%';
+              e.currentTarget.style.color = '#1f2937';
+            }}
           >
+            <span
+              className="btn-hover-bg absolute left-0 w-full h-full transition-all duration-500"
+              style={{
+                top: '100%',
+                background: '#7c3aed',
+                zIndex: -1,
+              }}
+            />
             Learn More
           </Link>
         </div>

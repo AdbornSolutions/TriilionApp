@@ -42,15 +42,19 @@ const ProjectsSlider = () => {
           modules={[Navigation, Pagination]}
           spaceBetween={20}
           slidesPerView={4}
+          slidesPerGroup={4}
           navigation
           pagination={{ 
             clickable: true,
-            el: '.custom-pagination'
+            el: '.custom-pagination',
+            renderBullet: function (index, className) {
+              return '<span class="' + className + ' pagination-dash"></span>';
+            }
           }}
           breakpoints={{
-            320: { slidesPerView: 1 },
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 4 },
+            320: { slidesPerView: 1, slidesPerGroup: 1 },
+            640: { slidesPerView: 2, slidesPerGroup: 2 },
+            1024: { slidesPerView: 4, slidesPerGroup: 4 },
           }}
         >
           {projects.map((project) => (
@@ -79,7 +83,9 @@ const ProjectsSlider = () => {
         </Swiper>
 
         {/* Custom Pagination with Dashes */}
-        <div className="custom-pagination mt-8 flex justify-center gap-2"></div>
+        <div className="testimonials-pagination mt-8 flex justify-center gap-6">
+          
+        </div>
       </div>
     </section>
   );

@@ -18,10 +18,15 @@ const Home = () => {
     <MainLayout>
       {/* Hero Section */}
       <HeroSection
-        title="IT Solutions & Services"
+        smallHeading="Experience the Best IT Solutions "
+        title={
+          <>
+            IT Solutions <span className="text-purple-500">&</span> <br /> Services
+          </>
+        }
         subtitle="Transform your business with cutting-edge technology solutions. We deliver innovation, quality, and excellence."
         backgroundImage={heroBg}
-        ctaText="Get Started"
+        ctaText="Learn More"
         ctaLink="/contact"
       />
 

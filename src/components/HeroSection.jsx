@@ -1,4 +1,5 @@
 const HeroSection = ({ 
+  smallHeading, 
   title, 
   subtitle, 
   backgroundImage, 
@@ -7,7 +8,7 @@ const HeroSection = ({
   overlay = true 
 }) => {
   return (
-    <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[700px] flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 w-full h-full">
         {backgroundImage ? (
@@ -28,6 +29,11 @@ const HeroSection = ({
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+        {smallHeading && (
+          <h2 className="text-xl md:text-xl lg:text-xl  text-gray-300 mb-4  underline">
+            {smallHeading}
+          </h2>
+        )}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
           {title}
         </h1>

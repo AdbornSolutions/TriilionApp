@@ -61,10 +61,10 @@ const StatsBar = () => {
   return (
     <div className="w-full py-8 px-4" style={{ background: '#f8f8f8' }}>
       <div
-        className="max-w-5xl mx-auto relative overflow-hidden"
+        className="max-w-6xl mx-auto  relative overflow-hidden"
         style={{
           background: '#7c3aed',
-          borderRadius: 16,
+          borderRadius: '0px 19px 0px 19px',
           padding: '28px 40px',
           display: 'grid',
           gridTemplateColumns: 'repeat(4, 1fr)',

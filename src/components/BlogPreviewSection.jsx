@@ -61,6 +61,7 @@ const BlogPreviewSection = () => {
           {blogPosts.map((post) => (
             <div
               key={post.id}
+              className="group/blogcard"
               style={{
                 background: '#fff',
                 borderRadius: 8,
@@ -84,6 +85,7 @@ const BlogPreviewSection = () => {
                 />
                 {/* Date badge — top left purple rectangle */}
                 <div
+                  className="relative overflow-hidden"
                   style={{
                     position: 'absolute',
                     top: 14,
@@ -95,8 +97,25 @@ const BlogPreviewSection = () => {
                     padding: '4px 12px',
                     borderRadius: 4,
                     letterSpacing: '0.03em',
+                    zIndex: 2,
+                  }}
+                  onMouseEnter={e => {
+                    const bgEl = e.currentTarget.querySelector('.date-hover-bg');
+                    if (bgEl) bgEl.style.top = '0';
+                  }}
+                  onMouseLeave={e => {
+                    const bgEl = e.currentTarget.querySelector('.date-hover-bg');
+                    if (bgEl) bgEl.style.top = '100%';
                   }}
                 >
+                  <span
+                    className="date-hover-bg absolute left-0 w-full h-full transition-all duration-500"
+                    style={{
+                      top: '100%',
+                      background: '#6d28d9',
+                      zIndex: -1,
+                    }}
+                  />
                   {post.date}
                 </div>
               </div>
@@ -123,9 +142,10 @@ const BlogPreviewSection = () => {
                   {post.title}
                 </h3>
 
-                {/* Read More — outlined button with left/top/bottom border only */}
+                {/* Read More — outlined button with bottom-to-top hover */}
                 <Link
                   to={post.link || '/blog'}
+                  className="relative overflow-hidden"
                   style={{
                     display: 'inline-block',
                     alignSelf: 'flex-start',
@@ -136,17 +156,29 @@ const BlogPreviewSection = () => {
                     padding: '7px 20px',
                     borderRadius: 4,
                     textDecoration: 'none',
-                    transition: 'border-color 0.2s, color 0.2s',
+                    zIndex: 1,
                   }}
                   onMouseEnter={e => {
+                    const bgEl = e.currentTarget.querySelector('.readmore-hover-bg');
+                    if (bgEl) bgEl.style.top = '0';
+                    e.currentTarget.style.color = '#fff';
                     e.currentTarget.style.borderColor = '#7c3aed';
-                    e.currentTarget.style.color = '#7c3aed';
                   }}
                   onMouseLeave={e => {
-                    e.currentTarget.style.borderColor = '#d1d5db';
+                    const bgEl = e.currentTarget.querySelector('.readmore-hover-bg');
+                    if (bgEl) bgEl.style.top = '100%';
                     e.currentTarget.style.color = '#374151';
+                    e.currentTarget.style.borderColor = '#d1d5db';
                   }}
                 >
+                  <span
+                    className="readmore-hover-bg absolute left-0 w-full h-full transition-all duration-500"
+                    style={{
+                      top: '100%',
+                      background: '#7c3aed',
+                      zIndex: -1,
+                    }}
+                  />
                   Read More
                 </Link>
               </div>

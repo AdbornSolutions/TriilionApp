@@ -20,7 +20,32 @@ const FooterCTA = () => {
         <h1 className="text-white text-4xl sm:text-5xl font-bold mb-6">
           Looking for the Best IT Business Solutions?
         </h1>
-        <button className="bg-white text-purple-600 font-semibold px-6 py-3 rounded-md hover:bg-gray-100 transition">
+        <button
+          className="relative font-semibold px-6 py-3 rounded-md overflow-hidden"
+          style={{
+            background: '#ffffff',
+            color: '#9333ea',
+            zIndex: 1,
+          }}
+          onMouseEnter={e => {
+            const bgEl = e.currentTarget.querySelector('.btn-hover-bg');
+            if (bgEl) bgEl.style.top = '0';
+            e.currentTarget.style.color = '#ffffff';
+          }}
+          onMouseLeave={e => {
+            const bgEl = e.currentTarget.querySelector('.btn-hover-bg');
+            if (bgEl) bgEl.style.top = '100%';
+            e.currentTarget.style.color = '#9333ea';
+          }}
+        >
+          <span
+            className="btn-hover-bg absolute left-0 w-full h-full transition-all duration-500"
+            style={{
+              top: '100%',
+              background: 'rgba(79, 58, 237, 1)',
+              zIndex: -1,
+            }}
+          />
           Learn More
         </button>
       </div>
