@@ -54,9 +54,9 @@ export const StatCard = ({ number, label, icon }) => {
 
 export const FeatureCard = ({ icon, title, description }) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+    <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center">
       {icon && (
-        <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+        <div className="mb-4 flex justify-center">
           {icon}
         </div>
       )}
