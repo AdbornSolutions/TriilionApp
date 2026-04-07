@@ -36,19 +36,22 @@ const testimonials = [
 const TestimonialsSlider = () => {
   return (
     <>
-      {/* Pagination dot styles */}
+      {/* Pagination dash styles */}
       <style>{`
-        .testimonials-pagination .swiper-pagination-bullet {
-          width: 28px !important;
-          height: 5px !important;
-          border-radius: 3px !important;
+        .testimonials-pagination .pagination-dash {
+          width: 40px !important;
+          height: 4px !important;
+          border-radius: 2px !important;
           background: #c4b5d4 !important;
           opacity: 1 !important;
-          transition: background 0.2s, width 0.2s;
+          cursor: pointer !important;
+          transition: all 0.3s ease !important;
+          display: inline-block !important;
+          margin: 0 6px !important;
         }
-        .testimonials-pagination .swiper-pagination-bullet-active {
+        .testimonials-pagination .pagination-dash.swiper-pagination-bullet-active {
           background: #7c3aed !important;
-          width: 40px !important;
+          width: 60px !important;
         }
       `}</style>
 
@@ -127,13 +130,17 @@ const TestimonialsSlider = () => {
               modules={[Pagination]}
               spaceBetween={28}
               slidesPerView={2}
+              slidesPerGroup={2}
               pagination={{
                 clickable: true,
                 el: ".testimonials-pagination",
+                renderBullet: function (index, className) {
+                  return '<span class="' + className + ' pagination-dash"></span>';
+                }
               }}
               breakpoints={{
-                320: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
+                320: { slidesPerView: 1, slidesPerGroup: 1 },
+                768: { slidesPerView: 2, slidesPerGroup: 2 },
               }}
               style={{ paddingTop: 60, paddingBottom: 8 }}
             >
@@ -244,8 +251,9 @@ const TestimonialsSlider = () => {
 
             {/* Dash pagination */}
             <div
-              className="testimonials-pagination mt-10 flex justify-center gap-2"
+              className="testimonials-pagination mt-10 flex justify-center gap-3"
             />
+            
           </div>
         </div>
       </section>

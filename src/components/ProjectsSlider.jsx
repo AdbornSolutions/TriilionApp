@@ -83,8 +83,24 @@ const ProjectsSlider = () => {
         </Swiper>
 
         {/* Custom Pagination with Dashes */}
-        <div className="testimonials-pagination mt-8 flex justify-center gap-6">
-          
+        <div className="custom-pagination testimonials-pagination mt-8 flex justify-center gap-6">
+          <style>{`
+            .custom-pagination .pagination-dash,
+            .testimonials-pagination .pagination-dash {
+              width: 40px;
+              height: 4px;
+              background: #d1d5db;
+              border-radius: 2px;
+              cursor: pointer;
+              transition: all 0.3s ease;
+              display: inline-block;
+            }
+            .custom-pagination .pagination-dash.swiper-pagination-bullet-active,
+            .testimonials-pagination .pagination-dash.swiper-pagination-bullet-active {
+              background: #7c3aed;
+              width: 60px;
+            }
+          `}</style>
         </div>
       </div>
     </section>

@@ -35,7 +35,28 @@ const ServicesSection = () => {
           }}
         >
           {/* Image container */}
-          <div style={{ position: 'relative' }}>
+          <div 
+            className="hover-container"
+            style={{ position: 'relative' }}
+            onMouseEnter={e => {
+              const container = e.currentTarget;
+              const badgeBg = container.querySelector('.badge-hover-bg');
+              const titleBg = container.querySelector('.title-hover-bg');
+              const numberBadge = container.querySelector('.number-badge');
+              if (badgeBg) badgeBg.style.top = '0';
+              if (titleBg) titleBg.style.bottom = '0';
+              if (numberBadge) numberBadge.style.color = '#6428cbff';
+            }}
+            onMouseLeave={e => {
+              const container = e.currentTarget;
+              const badgeBg = container.querySelector('.badge-hover-bg');
+              const titleBg = container.querySelector('.title-hover-bg');
+              const numberBadge = container.querySelector('.number-badge');
+              if (badgeBg) badgeBg.style.top = '100%';
+              if (titleBg) titleBg.style.bottom = '100%';
+              if (numberBadge) numberBadge.style.color = '#fff';
+            }}
+          >
             <img
               src={img}
               style={{
@@ -48,7 +69,7 @@ const ServicesSection = () => {
 
             {/* Number badge — bottom right corner of image */}
             <div
-              className="group/badge relative overflow-hidden"
+              className="number-badge relative overflow-hidden transition-colors duration-500"
               style={{
                 position: 'absolute',
                 bottom: 21,
@@ -63,16 +84,6 @@ const ServicesSection = () => {
                 fontSize: 16,
                 fontWeight: 700,
                 zIndex: 2,
-              }}
-              onMouseEnter={e => {
-                const bgEl = e.currentTarget.querySelector('.badge-hover-bg');
-                if (bgEl) bgEl.style.top = '0';
-                e.currentTarget.style.color = '#6428cbff';
-              }}
-              onMouseLeave={e => {
-                const bgEl = e.currentTarget.querySelector('.badge-hover-bg');
-                if (bgEl) bgEl.style.top = '100%';
-                e.currentTarget.style.color = '#fff';
               }}
             >
               <span
@@ -103,21 +114,11 @@ const ServicesSection = () => {
                 boxShadow: '0 2px 12px rgba(0,0,0,0.20)',
                 zIndex: 1,
               }}
-              onMouseEnter={e => {
-                const bgEl = e.currentTarget.querySelector('.title-hover-bg');
-                if (bgEl) bgEl.style.top = '0';
-                e.currentTarget.style.color = '#fff';
-              }}
-              onMouseLeave={e => {
-                const bgEl = e.currentTarget.querySelector('.title-hover-bg');
-                if (bgEl) bgEl.style.top = '100%';
-                e.currentTarget.style.color = '#0f0a1e';
-              }}
             >
               <span
                 className="title-hover-bg absolute left-0 w-full h-full transition-all duration-500"
                 style={{
-                  top: '100%',
+                  bottom: '100%',
                   background: '#7c3aed',
                   zIndex: -1,
                 }}
