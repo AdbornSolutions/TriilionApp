@@ -1,7 +1,7 @@
 // TestimonialsSlider.jsx
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import dottedBg from '../assets/All/doted bg.png';
@@ -42,8 +42,8 @@ const TestimonialsSlider = () => {
           width: 40px !important;
           height: 4px !important;
           border-radius: 2px !important;
-          background: #c4b5d4 !important;
-          opacity: 1 !important;
+          background: #7c3aed !important;
+          opacity: 0.4 !important;
           cursor: pointer !important;
           transition: all 0.3s ease !important;
           display: inline-block !important;
@@ -52,6 +52,34 @@ const TestimonialsSlider = () => {
         .testimonials-pagination .pagination-dash.swiper-pagination-bullet-active {
           background: #7c3aed !important;
           width: 60px !important;
+          opacity: 1 !important;
+        }
+        .testimonial-nav-dash {
+          width: 40px !important;
+          height: 4px !important;
+          border-radius: 2px !important;
+          background: #c4b5d4 !important;
+          cursor: pointer !important;
+          transition: all 0.3s ease !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          border: none !important;
+          padding: 0 !important;
+        }
+        .testimonial-nav-dash:hover {
+          background: #7c3aed !important;
+        }
+        .testimonial-nav-dash::after {
+          font-family: 'swiper-icons' !important;
+          font-size: 12px !important;
+          color: #fff !important;
+        }
+        .testimonial-prev::after {
+          content:  !important;
+        }
+        .testimonial-next::after {
+          content:  !important;
         }
       `}</style>
 
@@ -127,10 +155,18 @@ const TestimonialsSlider = () => {
           {/* Swiper */}
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <Swiper
-              modules={[Pagination]}
+              modules={[Pagination, Autoplay, Navigation]}
               spaceBetween={28}
               slidesPerView={2}
               slidesPerGroup={2}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              navigation={{
+                nextEl: ".testimonial-next",
+                prevEl: ".testimonial-prev",
+              }}
               pagination={{
                 clickable: true,
                 el: ".testimonials-pagination",
@@ -254,6 +290,29 @@ const TestimonialsSlider = () => {
               className="testimonials-pagination mt-10 flex justify-center gap-3"
             />
             
+            {/* Navigation dashes */}
+            <div className="flex justify-center items-center gap-4 mt-6">
+              <button 
+                className="testimonial-prev testimonial-nav-dash" 
+                aria-label="Previous"
+                style={{
+                  background: '#7c3aed',
+                  width: '40px',
+                  height: '4px',
+                  borderRadius: '2px',
+                }}
+              />
+              <button 
+                className="testimonial-next testimonial-nav-dash" 
+                aria-label="Next"
+                style={{
+                  background: '#7c3aed',
+                  width: '40px',
+                  height: '4px',
+                  borderRadius: '2px',
+                }}
+              />
+            </div>
           </div>
         </div>
       </section>
