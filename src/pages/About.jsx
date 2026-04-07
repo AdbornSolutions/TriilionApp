@@ -15,7 +15,7 @@ const About = () => {
     <MainLayout>
       {/* Hero Section */}
       <HeroSection
-        title="About TrillionApp"
+        title="About Trillion-App | The Future of Technology"
         subtitle="Learn about our journey, mission, and the values that drive us"
         backgroundImage={heroBg}
       />
