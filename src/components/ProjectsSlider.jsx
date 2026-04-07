@@ -69,7 +69,7 @@ const ProjectsSlider = () => {
                 <div 
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center"
                   style={{
-                    background: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(184, 130, 252, 0.8) 81.71%)',
+                    background: 'linear-gradient(180deg, rgba(184, 130, 252, 0) 0%, rgba(184, 130, 252, 0.6) 81.71%)',
                   }}
                 >
                   <div className="text-center text-white p-4">

@@ -61,21 +61,7 @@ export const services = [
     ],
     image: '/assets/mobile-app.jpg',
   },
-  {
-  id: 'ui-ux-design',
-  title: 'UI/UX Designing',
-  description: 'Create modern, intuitive and visually appealing user interfaces that deliver seamless user experiences across all devices.',
-  icon: <img src={iconImg} alt="UI/UX Designing" className="w-8 h-8" />,
-  features: [
-    'User Interface Design',
-    'User Experience Design',
-    'Wireframing',
-    'Prototyping',
-    'Responsive Design',
-    'Design Systems'
-  ],
-  image: '/assets/ui-ux-design.jpg',
-},
+  
 
 // {
 //   id: 'data-analysis',

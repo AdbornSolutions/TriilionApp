@@ -289,30 +289,6 @@ const TestimonialsSlider = () => {
             <div
               className="testimonials-pagination mt-10 flex justify-center gap-3"
             />
-            
-            {/* Navigation dashes */}
-            <div className="flex justify-center items-center gap-4 mt-6">
-              <button 
-                className="testimonial-prev testimonial-nav-dash" 
-                aria-label="Previous"
-                style={{
-                  background: '#7c3aed',
-                  width: '40px',
-                  height: '4px',
-                  borderRadius: '2px',
-                }}
-              />
-              <button 
-                className="testimonial-next testimonial-nav-dash" 
-                aria-label="Next"
-                style={{
-                  background: '#7c3aed',
-                  width: '40px',
-                  height: '4px',
-                  borderRadius: '2px',
-                }}
-              />
-            </div>
           </div>
         </div>
       </section>

@@ -122,21 +122,21 @@ const Navbar = () => {
 
                 {link.name === 'Services' ? (
                   <>
-                    <button
-                      onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                    <Link
+                      to="/services"
                       className="flex items-center gap-1 font-medium"
                       style={{
                         fontSize: '18px',
                         color: location.pathname.includes('/services') ? '#a78bfa' : '#ccc',
-                        background: 'none',
-                        border: 'none'
                       }}
+                      onMouseEnter={() => setIsServicesDropdownOpen(true)}
+                      onMouseLeave={() => setIsServicesDropdownOpen(false)}
                     >
                       Services
                       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                         <path d="M6 9l6 6 6-6"/>
                       </svg>
-                    </button>
+                    </Link>
 
                     {isServicesDropdownOpen && (
                       <div
@@ -146,6 +146,8 @@ const Navbar = () => {
                           border: '1px solid #2e2e4a',
                           minWidth: 210
                         }}
+                        onMouseEnter={() => setIsServicesDropdownOpen(true)}
+                        onMouseLeave={() => setIsServicesDropdownOpen(false)}
                       >
                         {servicesLinks.map((service) => (
                           <Link

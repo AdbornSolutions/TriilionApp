@@ -12,6 +12,8 @@ import ClientLogos from '../components/ClientLogos.jsx';
 import TestimonialsSection from '../components/TestimonialsSection.jsx';
 import ProjectsSlider from '../components/ProjectsSlider.jsx';
 import BlogPreviewSection from '../components/BlogPreviewSection.jsx';
+import StatsBar from '../components/StatsBar.jsx';
+
 
 const Home = () => {
   return (
@@ -33,6 +35,7 @@ const Home = () => {
       <ClientLogos />
 
       <Aboutsection />
+      <StatsBar />
       <ServicesSection />
 
       <ProjectsSlider />

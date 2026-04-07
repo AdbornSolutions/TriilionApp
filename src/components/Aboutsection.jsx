@@ -105,7 +105,6 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <StatsBar />
     </section>
   );
 };
