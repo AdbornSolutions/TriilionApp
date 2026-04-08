@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import HeroSection from '../components/HeroSection';
 import SectionTitle from '../components/SectionTitle';
+import heroBg from '../assets/hero section/about-services-blog-contactus pages/ea708e963f94370a51861237163c2b9c4513b203.jpg';
 
 const ServiceDetail = ({ service }) => {
   return (
@@ -10,7 +11,7 @@ const ServiceDetail = ({ service }) => {
       <HeroSection
         title={service.title}
         subtitle={`Professional ${service.title.toLowerCase()} services for your business`}
-        backgroundImage={service.image}
+        backgroundImage={heroBg}
         ctaText="Get Started"
         ctaLink="/contact"
       />

@@ -216,5 +216,4 @@ export const whyChooseUs = [
   'On-time delivery',
   '24/7 support and maintenance',
   'Competitive pricing',
-  'Scalable solutions',
 ];

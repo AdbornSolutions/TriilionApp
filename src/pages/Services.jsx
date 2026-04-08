@@ -15,7 +15,11 @@ const Services = () => {
     <MainLayout>
       {/* Hero Section */}
       <HeroSection
-        title="Our Services"
+        title={
+          <>
+            Our <span className='text-purple-600'>Services</span>
+          </>
+        }
         subtitle="Comprehensive IT solutions to power your digital transformation"
         backgroundImage={heroBg}
       />
