@@ -5,19 +5,22 @@ import { services } from '../data/data.jsx';
 import OurProcess from '../assets/Frame 121.png';
 import TestimonialsSlider from '../components/TestimonialsSection.jsx';
 import TeamImg from '../assets/team.png';
-import customErpIcon from '../assets/ERP/Expertise/custom erp.png';
-import inventoryIcon from '../assets/ERP/Expertise/inventry.png';
-import billingIcon from '../assets/ERP/Expertise/bill.png';
-import hrIcon from '../assets/ERP/Expertise/hr.png';
-import salesIcon from '../assets/ERP/Expertise/sales.png';
-import adminIcon from '../assets/ERP/Expertise/admin.png';
-import cloudIcon from '../assets/ERP/Expertise/cloud.png';
-import supportIcon from '../assets/ERP/Expertise/support.png';
+import businessIcon from '../assets/Website/expertice/buisness.png';
+import customDevIcon from '../assets/Website/expertice/custom dev.png';
+import ecommerceIcon from '../assets/Website/expertice/e-comm.png';
+import corporateIcon from '../assets/Website/expertice/corporate.png';
+import responsiveIcon from '../assets/Website/expertice/responsive.png';
+import redesignIcon from '../assets/Website/expertice/web design.png';
+import adminIcon from '../assets/Website/expertice/admin.png';
+import seoIcon from '../assets/Website/Why us/seo.png';
 import increaseIcon from '../assets/Digital marketing/tangible/increase.png';
 import leadsIcon from '../assets/Digital marketing/tangible/general.png';
 import conversionIcon from '../assets/Digital marketing/tangible/conversion.png';
-import teamIcon from '../assets/ERP/Expertise/Margin.png';
-import resultIcon from '../assets/Digital marketing/why us/result.png';
+import modernIcon from '../assets/Website/Why us/mordern.png';
+import fastIcon from '../assets/Website/Why us/fast.png';
+import SecureIcon from '../assets/Website/Why us/secure.png';
+import easyIcon from '../assets/Website/Why us/easy-manage.png';
+import whyRightIcon from '../assets/Website/Why us/why right.png';
 /* ─── icon helpers (inline SVG so no extra dep needed) ─── */
 const Icon = ({ d, size = 30, color = '#7c3aed' }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
@@ -29,98 +32,149 @@ const Icon = ({ d, size = 30, color = '#7c3aed' }) => (
 /* ─── data ─── */
 const digitalServices = [
   {
-    icon: customErpIcon,
-    title: "Custom ERP",
-    desc: "Tailor-made solutions designed specifically for your unique business workflows.",
-    points: ["Workflow Automation", "Custom Modules", "Business Integration"],
+    icon: businessIcon,
+    title: "Business Website",
+    desc: "Professional websites that showcase your company and brand to the world.",
+    points: ["Modern Design", "Brand Focused", "SEO Friendly"],
   },
   {
-    icon: inventoryIcon,
-    title: "Inventory",
-    desc: "Real-time stock tracking, multi-warehouse management, and automated replenishment.",
-    points: ["Stock Tracking", "Warehouse Management", "Auto Reorder"],
+    icon: customDevIcon,
+    title: "Custom Development",
+    desc: "Tailored features and complex functionality built specifically for your needs.",
+    points: ["Custom Features", "Advanced Logic", "Scalable Code"],
   },
   {
-    icon: billingIcon,
-    title: "Billing & Finance",
-    desc: "Streamline invoicing, accounts payable, and financial reporting in one place.",
-    points: ["Invoice Automation", "Expense Tracking", "Financial Reports"],
+    icon: ecommerceIcon,
+    title: "E-commerce Solutions",
+    desc: "Online stores with secure payments and easy-to-manage product catalogs.",
+    points: ["Secure Payments", "Cart System", "Product Management"],
   },
   {
-    icon: hrIcon,
-    title: "HR & Payroll",
-    desc: "Simplify employee management, attendance, and automated payroll processing.",
-    points: ["Employee Records", "Payroll Automation", "Attendance Tracking"],
+    icon: corporateIcon,
+    title: "Corporate Website",
+    desc: "Professional and credible online presence for large-scale organizations.",
+    points: ["Corporate Design", "High Performance", "Brand Authority"],
   },
   {
-    icon: salesIcon,
-    title: "Sales & Purchase",
-    desc: "Manage procurement cycles and CRM pipelines with end-to-end transparency.",
-    points: ["Sales Tracking", "Vendor Management", "Purchase Orders"],
+    icon: responsiveIcon,
+    title: "Responsive Design",
+    desc: "Perfect display on all devices from mobile phones to ultra-wide monitors.",
+    points: ["Mobile First", "Cross Device", "Fast Loading"],
+  },
+  {
+    icon: redesignIcon,
+    title: "Website Redesign",
+    desc: "Modern layouts and improved performance for existing legacy websites.",
+    points: ["UI Upgrade", "Speed Optimization", "Modern UX"],
   },
   {
     icon: adminIcon,
-    title: "Admin Dashboard",
-    desc: "Advanced data visualization and centralized control over all operations.",
-    points: ["Analytics Dashboard", "Reports", "Performance Metrics"],
+    title: "Admin Dashboards",
+    desc: "Easy-to-use control panels to manage your content and monitor performance.",
+    points: ["Analytics Panel", "Content Control", "Business Insights"],
   },
   {
-    icon: cloudIcon,
-    title: "Cloud Solutions",
-    desc: "Scalable cloud hosting and SaaS deployment for global accessibility.",
-    points: ["Cloud Hosting", "SaaS Deployment", "Secure Storage"],
-  },
-  {
-    icon: supportIcon,
-    title: "Support",
-    desc: "Dedicated 24/7 maintenance and technical support for seamless operations.",
-    points: ["System Monitoring", "Bug Fixing", "Updates"],
+    icon: seoIcon,
+    title: "SEO Integration",
+    desc: "Built-in SEO best practices to improve your search engine rankings.",
+    points: ["On-Page SEO", "Fast Loading", "Schema Markup"],
   },
 ];
 
 const benefits = [
   {
     icon: increaseIcon,
-    title: "Increased Efficiency",
-    desc: "Automate repetitive tasks and reduce manual errors significantly.",
+    title: "Builds Strong First Impression",
+    desc: "Your website is often the first interaction customers have with your business. A professional design builds trust.",
   },
   {
     icon: leadsIcon,
-    title: "Better Decision Making",
-    desc: "Access centralized accurate data for better forecasting and strategy.",
+    title: "Increases Business Credibility",
+    desc: "Customers trust businesses that have professional and well-designed websites.",
   },
   {
     icon: conversionIcon,
-    title: "Cost Reduction",
-    desc: "Optimize resource allocation and eliminate unnecessary operational costs.",
+    title: "Improves Online Visibility",
+    desc: "With SEO-friendly development your website can appear higher in Google search results.",
   },
 ];
 
-const whyUs = [
+const whyFeatures = [
   {
-    icon: teamIcon,
-    title: 'Agile Methodologies',
-    desc: 'We deliver in sprints, ensuring you see progress and provide feedback early.',
+    icon: modernIcon,
+    title: "Modern & Pro",
+    desc: "Cutting-edge aesthetic designs.",
   },
   {
-    icon: teamIcon,
-    title: 'Scalable Architecture',
-    desc: "Our systems grow as your business grows, handling more users and data effortlessly..",
+    icon: responsiveIcon,
+    title: "Mobile-Friendly",
+    desc: "Fully responsive layouts.",
   },
   {
-    icon: teamIcon,
-    title: 'Post-Launch Partnership',
-    desc: 'We do not just launch; we support you for years to ensure maximum ROI.',
+    icon: fastIcon,
+    title: "Fast Loading",
+    desc: "Speed optimized code.",
+  },
+  {
+    icon: seoIcon,
+    title: "SEO-Friendly",
+    desc: "Rank higher on Google.",
+  },
+  {
+    icon: SecureIcon,
+    title: "Secure & Reliable",
+    desc: "Bank-grade security standards.",
+  },
+  {
+    icon: easyIcon,
+    title: "Easy to Manage",
+    desc: "User-friendly CMS systems.",
   },
 ];
 
 const stats = [
-  { value: "35x", label: "Improve Productivity", light: true },
-  { value: "25x", label: "Reduce Operational Costs" },
-  { value: "60%", label: "Faster Reporting" },
-  { value: "30%", label: "Reduce Inventory Costs", dark: true },
+  { value: "75%", label: "Increase in Business Credibility", light: true },
+  { value: "60%", label: "Increase in Online Visibility" },
+  { value: "35%", label: "Increase in Sales" },
+  { value: "50%", label: "Increase in Lead Generation", dark: true },
 ];
+const FeatureItem = ({ icon, title, desc }) => (
+  <div style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
+    
+    <div
+      style={{
+        width: 48,
+        height: 48,
+        borderRadius: 12,
+        background: "#f5f3ff",
+        flexShrink: 0,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '8px',
+      }}
+    >
+      <img src={icon} alt={title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+    </div>
 
+    <div>
+      <h4 style={{ margin: 0, fontSize: 15, fontWeight: 700, color: "#1e1b4b" }}>
+        {title}
+      </h4>
+
+      <p
+        style={{
+          margin: 0,
+          fontSize: 13.5,
+          color: "#6b7280",
+          lineHeight: 1.6,
+        }}
+      >
+        {desc}
+      </p>
+    </div>
+  </div>
+);
 /* ─── Eyebrow label ─── */
 const Eyebrow = ({ text }) => (
   <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12, justifyContent: 'center' }}>
@@ -264,7 +318,7 @@ const WhyRow = ({ icon, title, desc }) => (
 
 /* ════════════════════════════════════════════════ */
 const WebDevelopment = () => {
-  const service = services.find(s => s.id === 'erp-development');
+  const service = services.find(s => s.id === 'web-development');
 
   return (
     <MainLayout>
@@ -285,10 +339,11 @@ const WebDevelopment = () => {
           <Eyebrow text="Expertise" />
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
             <h2 style={{ fontSize: 34, fontWeight: 800, color: '#1e1b4b', margin: '0 0 12px' }}>
-              Our ERP Development
+              Our Web Development Services
             </h2>
             <p style={{ fontSize: 15, color: '#6b7280', maxWidth: 520, margin: '0 auto' }}>
-Comprehensive ERP solutions designed to streamline and scale your business operations.            </p>
+              Professional web development solutions to build your digital presence and drive business growth.
+            </p>
           </div>
 
           {/* 4-col grid */}
@@ -351,7 +406,7 @@ Comprehensive ERP solutions designed to streamline and scale your business opera
                 lineHeight: 1.25,
               }}
             >
-              Benefits of ERP Software
+              Benefits of Professional Web Development
             </h2>
 
             <p
@@ -362,7 +417,7 @@ Comprehensive ERP solutions designed to streamline and scale your business opera
                 margin: "0 0 32px",
               }}
             >
-              Implementing ERP software improves efficiency, centralizes business data, and helps organizations make smarter decisions.
+              A professional website builds credibility, attracts customers, and helps your business grow in the digital age.
             </p>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
@@ -401,97 +456,147 @@ Comprehensive ERP solutions designed to streamline and scale your business opera
       {/* ══════════════════════════════════════
           4. WHY CHOOSE US
       ══════════════════════════════════════ */}
-      <section style={{ padding: '80px 0', background: '#faf9ff' }}>
-        <div style={{
-          maxWidth: 1200, margin: '0 auto', padding: '0 24px',
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: 92,
-          alignItems: 'center',
-        }}>
-          {/* LEFT text */}
-          <div>
-            <h2 style={{ fontSize: 32, fontWeight: 800, color: '#1e1b4b', margin: '0 0 8px', lineHeight: 1.25 }}>
-              Why Choose{' '}
-              <span style={{ color: '#7c3aed' }}>Trillion Apps Technology</span>?
-            </h2>
-            <p style={{ fontSize: 14.5, color: '#6b7280', margin: '0 0 36px', lineHeight: 1.7 }}>
-We build scalable ERP systems tailored to your business processes, ensuring efficiency, transparency, and long-term growth.            </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
-              {whyUs.map((w, i) => <WhyRow key={i} {...w} />)}
-            </div>
-          </div>
+      <section style={{ padding: "90px 0", background: "#faf9ff" }}>
+  <div
+    style={{
+      maxWidth: 1200,
+      margin: "0 auto",
+      padding: "0 24px",
+      display: "grid",
+      gridTemplateColumns: "1.2fr 1fr",
+      gap: 70,
+      alignItems: "center",
+    }}
+  >
 
-          {/* RIGHT STATS */}
-<div
-  style={{
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gap: 24,
-  }}
+{/* LEFT CONTENT */}
+
+<div>
+
+<h2
+style={{
+fontSize: 34,
+fontWeight: 800,
+color: "#1e1b4b",
+marginBottom: 12,
+}}
 >
-  <div
-    style={{
-      background: "#fff",
-      padding: "30px",
-      borderRadius: 14,
-      textAlign: "center",
-      boxShadow: "0 8px 30px rgba(0,0,0,0.05)",
-    }}
-  >
-    <h3 style={{ fontSize: 28, color: "#7c3aed", margin: 0 }}>6+</h3>
-    <p style={{ fontSize: 12, color: "#6b7280", marginTop: 6 }}>
-      YEARS EXPERIENCE
-    </p>
-  </div>
+Why Choose{" "}
+<span style={{ color: "#7c3aed" }}>
+Trillion Apps Technology
+</span>
+?
+</h2>
 
-  <div
-    style={{
-      background: "#fff",
-      padding: "30px",
-      borderRadius: 14,
-      textAlign: "center",
-      boxShadow: "0 8px 30px rgba(0,0,0,0.05)",
-    }}
-  >
-    <h3 style={{ fontSize: 28, color: "#7c3aed", margin: 0 }}>80+</h3>
-    <p style={{ fontSize: 12, color: "#6b7280", marginTop: 6 }}>
-      PROJECTS DONE
-    </p>
-  </div>
+<p
+style={{
+fontSize: 14.5,
+color: "#6b7280",
+marginBottom: 36,
+lineHeight: 1.7,
+maxWidth: 520,
+}}
+>
+We don't just build websites; we build high-performance digital tools
+that meet the highest industry standards for success.
+</p>
 
-  <div
-    style={{
-      background: "#fff",
-      padding: "30px",
-      borderRadius: 14,
-      textAlign: "center",
-      boxShadow: "0 8px 30px rgba(0,0,0,0.05)",
-    }}
-  >
-    <h3 style={{ fontSize: 28, color: "#7c3aed", margin: 0 }}>15+</h3>
-    <p style={{ fontSize: 12, color: "#6b7280", marginTop: 6 }}>
-      EXPERT DEVELOPERS
-    </p>
-  </div>
-
-  <div
-    style={{
-      background: "#fff",
-      padding: "30px",
-      borderRadius: 14,
-      textAlign: "center",
-      boxShadow: "0 8px 30px rgba(0,0,0,0.05)",
-    }}
-  >
-    <h3 style={{ fontSize: 28, color: "#7c3aed", margin: 0 }}>98%</h3>
-    <p style={{ fontSize: 12, color: "#6b7280", marginTop: 6 }}>
-      CLIENT SATISFACTION
-    </p>
-  </div>
+<div
+style={{
+display: "grid",
+gridTemplateColumns: "1fr 1fr",
+gap: 26,
+}}
+>
+{whyFeatures.map((f, i) => (
+<FeatureItem key={i} {...f} />
+))}
 </div>
-        </div>
-      </section>
+
+</div>
+
+{/* RIGHT CARD */}
+
+<div
+style={{
+background: "#f3f0ff",
+borderRadius: 24,
+padding: 30,
+boxShadow: "0 20px 40px rgba(124,58,237,0.15)",
+}}
+>
+
+<div
+style={{
+background: "#fff",
+borderRadius: 18,
+padding: "60px 40px",
+textAlign: "center",
+boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+}}
+>
+
+{/* ICON */}
+
+<div
+style={{
+width: 70,
+height: 70,
+borderRadius: 12,
+background: "#f5f3ff",
+margin: "0 auto 20px",
+display: "flex",
+alignItems: "center",
+justifyContent: "center",
+padding: '12px',
+}}
+>
+<img src={whyRightIcon} alt="Why Choose Us" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+</div>
+
+<h3
+style={{
+fontSize: 20,
+fontWeight: 700,
+color: "#1e1b4b",
+marginBottom: 12,
+}}
+>
+Scalable Future-Ready
+</h3>
+
+<p
+style={{
+fontSize: 14,
+color: "#6b7280",
+lineHeight: 1.7,
+maxWidth: 320,
+margin: "0 auto 30px",
+}}
+>
+Our architecture is built to grow with your business, ensuring your
+investment remains valuable for years to come.
+</p>
+
+{/* BOTTOM LINES */}
+
+<div
+style={{
+display: "flex",
+justifyContent: "center",
+gap: 14,
+}}
+>
+<span style={{ width: 80, height: 4, background: "#8A38F5", borderRadius: 2 }} />
+<span style={{ width: 80, height: 4, background: "#8A38F5", borderRadius: 2 }} />
+<span style={{ width: 80, height: 4, background: "#8A38F5", borderRadius: 2 }} />
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
 
       {/* ══════════════════════════════════════
           5. TESTIMONIALS
