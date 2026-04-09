@@ -99,21 +99,21 @@ export const testimonials = [
     role: 'CEO',
     company: 'TechCorp',
     content: 'Working with TrillionApp was an absolute pleasure. They delivered our project on time and exceeded our expectations.',
-    image: '/assets/testimonial-1.jpg',
+    image: '/assets/Testimonial/c-1.png',
   },
   {
     name: 'Sarah Johnson',
     role: 'Marketing Director',
     company: 'InnovateCo',
     content: 'The digital marketing strategies implemented by TrillionApp helped us increase our online visibility by 200%.',
-    image: '/assets/testimonial-2.jpg',
+    image: '/assets/Testimonial/c-2.png',
   },
   {
     name: 'Michael Brown',
     role: 'Founder',
     company: 'StartupXYZ',
     content: 'Their team\'s expertise in ERP development transformed our business operations completely. Highly recommended!',
-    image: '/assets/testimonial-3.jpg',
+    image: '/assets/Testimonial/c-1.png',
   },
 ];
 

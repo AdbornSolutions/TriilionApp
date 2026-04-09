@@ -5,31 +5,35 @@ import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import dottedBg from '../assets/All/doted bg.png';
+import client1 from '../assets/Testimonial/c-2.png';
+import client2 from '../assets/Testimonial/c-1.png';
+import client3 from '../assets/Testimonial/testimonial-1.jpg';
+import client4 from '../assets/Testimonial/testimonial-2.jpg';
 
 const testimonials = [
   {
     name: "Moonkle LTD",
     role: "Client of Company",
     content: "Exceptional support in migrating our legacy systems to the cloud, enhancing our scalability and security.",
-    image: "/images/client1.jpg",
+    image: client1,
   },
   {
     name: "SoftTech",
     role: "Manager of Company",
     content: "Modernized our IT infrastructure without disrupting daily operations. Their team was responsive and knowledgeable.",
-    image: "/images/client2.jpg",
+    image: client2,
   },
   {
     name: "TechNova",
     role: "CEO",
     content: "Delivered solutions on time and exceeded expectations in terms of quality and support.",
-    image: "/images/client3.jpg",
+    image: client3,
   },
   {
     name: "InnovateX",
     role: "CTO",
     content: "A highly professional team that helped scale our systems efficiently.",
-    image: "/images/client4.jpg",
+    image: client4,
   },
 ];
 

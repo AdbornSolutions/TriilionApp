@@ -1,5 +1,6 @@
 // FooterCTA.jsx
 import React from "react";
+import { Link } from 'react-router-dom';
 import footerBanner from '../assets/All/1st footer banner/Frame 89.png';
 
 const FooterCTA = () => {
@@ -20,12 +21,14 @@ const FooterCTA = () => {
         <h1 className="text-white text-4xl sm:text-5xl font-bold mb-6">
           Looking for the Best IT Business Solutions?
         </h1>
-        <button
-          className="relative font-semibold px-6 py-3 rounded-md overflow-hidden"
+        <Link
+          to="/contact"
+          className="relative font-semibold px-6 py-3 rounded-md overflow-hidden inline-block"
           style={{
             background: '#ffffff',
             color: '#9333ea',
             zIndex: 1,
+            textDecoration: 'none',
           }}
           onMouseEnter={e => {
             const bgEl = e.currentTarget.querySelector('.btn-hover-bg');
@@ -46,8 +49,8 @@ const FooterCTA = () => {
               zIndex: -1,
             }}
           />
-          Learn More
-        </button>
+          Contact Us 
+        </Link>
       </div>
     </section>
   );

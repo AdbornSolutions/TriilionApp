@@ -137,7 +137,7 @@ const WhyChooseUs = () => {
             <img
               src={whyChooseUsImg}
               alt="Why Choose Us"
-              style={{ width: '100%', maxWidth: 480, objectFit: 'contain' }}
+              style={{ width: '100%', maxWidth: 500, objectFit: 'contain' }}
             />
           </div>
 

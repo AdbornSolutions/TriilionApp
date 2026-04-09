@@ -1,6 +1,6 @@
 import MainLayout from '../layouts/MainLayout';
 import HeroSection from '../components/HeroSection';
-import SectionTitle from '../components/SectionTitle';
+import heroBg from '../assets/hero section/about-services-blog-contactus pages/ea708e963f94370a51861237163c2b9c4513b203.jpg';
 
 const Terms = () => {
   return (
@@ -9,187 +9,217 @@ const Terms = () => {
       <HeroSection
         title="Terms & Conditions"
         subtitle="Please read our terms and conditions carefully"
-        backgroundImage="/assets/terms-hero.jpg"
+        backgroundImage={heroBg}
         overlay={true}
       />
 
       {/* Terms Content */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle
-            title="Terms & Conditions"
-            subtitle="Last updated: March 1, 2024"
-            centered={true}
-          />
+          {/* Legal Document Badge */}
+          <div className="mb-8">
+            <span className="inline-block px-4 py-1 bg-purple-100 text-purple-600 text-sm font-medium rounded-full">
+              Legal Document
+            </span>
+          </div>
 
-          <div className="prose prose-lg max-w-none">
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">Terms & Conditions</h1>
+          <p className="text-gray-500 mb-8">Last Updated: October 24, 2023</p>
+
+          <p className="text-gray-600 leading-relaxed mb-8">
+            Welcome to Trillion Apps Technology. By accessing or using our services, you agree to be bound by the terms and conditions outlined below. Please read them carefully.
+          </p>
+
+          <div className="space-y-8">
             {/* Section 1 */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                By accessing and using the services of TrillionApp Technologies ("we," "us," or "our"), 
-                you accept and agree to be bound by these Terms and Conditions ("Terms"). If you do not 
-                agree to these Terms, please do not use our services.
-              </p>
+            <div>
+              <h2 className="text-xl font-bold text-gray-900 mb-3">1. Acceptance of Terms</h2>
               <p className="text-gray-600 leading-relaxed">
-                These Terms apply to all visitors, users, and others who access or use our website, 
-                services, or products (collectively, the "Service").
+                By using the website or purchasing services from Trillion Apps Technology, you acknowledge that you have read, understood, and agreed to be bound by these terms. If you do not agree, please refrain from using our services.
               </p>
             </div>
 
             {/* Section 2 */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Description of Service</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                TrillionApp Technologies provides IT solutions and services including but not limited to:
+            <div>
+              <h2 className="text-xl font-bold text-gray-900 mb-3">2. Services</h2>
+              <p className="text-gray-600 leading-relaxed mb-3">
+                We provide a comprehensive range of technology solutions including but not limited to:
               </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-600 ml-4 mb-4">
-                <li>Web Development and Design</li>
-                <li>Mobile Application Development</li>
-                <li>ERP Development and Implementation</li>
-                <li>Digital Marketing Services</li>
-                <li>Software Consulting and Support</li>
-              </ul>
-              <p className="text-gray-600 leading-relaxed">
-                We reserve the right to modify, suspend, or discontinue any part of our services at any time.
-              </p>
+              <div className="grid grid-cols-2 gap-2 ml-4">
+                <div className="flex items-center gap-2 text-gray-600">
+                  <span className="text-purple-500">⊛</span> Web Design & Development
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <span className="text-purple-500">⊛</span> Mobile Application Development
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <span className="text-purple-500">⊛</span> ERP Solutions
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <span className="text-purple-500">⊛</span> Digital Marketing Strategy
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <span className="text-purple-500">⊛</span> Custom Software Development
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <span className="text-purple-500">⊛</span> IT Consultancy Services
+                </div>
+              </div>
             </div>
 
             {/* Section 3 */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">3. User Responsibilities</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                As a user of our services, you agree to:
+            <div>
+              <h2 className="text-xl font-bold text-gray-900 mb-3">3. User Responsibilities</h2>
+              <p className="text-gray-600 leading-relaxed">
+                Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account. You agree to provide accurate, current, and complete information during the registration and service process.
               </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-600 ml-4 mb-4">
-                <li>Provide accurate and complete information when using our services</li>
-                <li>Maintain the confidentiality of your account credentials</li>
-                <li>Use our services only for lawful purposes</li>
-                <li>Not attempt to gain unauthorized access to our systems</li>
-                <li>Not interfere with or disrupt our services or servers</li>
-              </ul>
             </div>
 
             {/* Section 4 */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Intellectual Property Rights</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                All content, features, and functionality of our services, including but not limited to text, 
-                graphics, logos, icons, images, audio clips, digital downloads, and software, are the property 
-                of TrillionApp Technologies or its content suppliers and are protected by international copyright, 
-                trademark, and other intellectual property laws.
-              </p>
+            <div>
+              <h2 className="text-xl font-bold text-gray-900 mb-3">4. Intellectual Property</h2>
               <p className="text-gray-600 leading-relaxed">
-                You are granted a limited license to access and use our services for personal, non-commercial 
-                purposes. This license does not include any resale or commercial use of our services.
+                All content, including text, graphics, logos, and software, is the property of Trillion Apps Technology or its content suppliers and is protected by international copyright laws.
               </p>
             </div>
 
             {/* Section 5 */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Payment Terms</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                For paid services:
+            <div>
+              <h2 className="text-xl font-bold text-gray-900 mb-3">5. Payments & Refunds</h2>
+              <p className="text-gray-600 leading-relaxed">
+                All payments for services shall be made as per the agreed-upon project milestones. Refund requests are subject to the specific service agreement signed at the commencement of the project. Generally, fees for completed work phases are non-refundable.
               </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-600 ml-4 mb-4">
-                <li>All fees are payable in advance unless otherwise agreed in writing</li>
-                <li>We reserve the right to change our pricing at any time</li>
-                <li>Refunds are subject to our refund policy as outlined in service agreements</li>
-                <li>Late payments may result in suspension of services</li>
-              </ul>
             </div>
 
             {/* Section 6 */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Confidentiality</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                We respect your privacy and are committed to protecting the confidentiality of your information. 
-                Our Privacy Policy outlines how we collect, use, and safeguard your data.
-              </p>
+            <div>
+              <h2 className="text-xl font-bold text-gray-900 mb-3">6. Limitation of Liability</h2>
               <p className="text-gray-600 leading-relaxed">
-                You agree not to disclose any confidential or proprietary information that you may obtain 
-                through our services without our prior written consent.
+                Trillion Apps Technology shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the services.
               </p>
             </div>
 
             {/* Section 7 */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Disclaimer of Warranties</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                OUR SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, 
-                EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE LAW, WE DISCLAIM 
-                ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF 
-                MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
-              </p>
-            </div>
-
-            {/* Section 8 */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Limitation of Liability</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                IN NO EVENT SHALL TRILLIONAPP TECHNOLOGIES, ITS OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS BE 
-                LIABLE FOR ANY INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, 
-                INCLUDING WITHOUT LIMITATION DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA, OR OTHER 
-                INTANGIBLE LOSSES, ARISING OUT OF OR IN CONNECTION WITH YOUR ACCESS TO OR USE OF OUR SERVICES.
-              </p>
-            </div>
-
-            {/* Section 9 */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Indemnification</h2>
+            <div>
+              <h2 className="text-xl font-bold text-gray-900 mb-3">7. Changes to Terms</h2>
               <p className="text-gray-600 leading-relaxed">
-                You agree to indemnify, defend, and hold harmless TrillionApp Technologies and its affiliates, 
-                officers, directors, employees, and agents from and against any and all claims, liabilities, 
-                damages, losses, or expenses, including reasonable legal fees, arising out of or in any way 
-                connected with your use of our services, your violation of these Terms, or your infringement 
-                of any third-party rights.
+                We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting to this page. Continued use of our services constitutes acceptance of the revised terms.
               </p>
             </div>
 
-            {/* Section 10 */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Termination</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                We may terminate or suspend your access to our services immediately, without prior notice or 
-                liability, for any reason, including if you breach these Terms.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                Upon termination, your right to use our services will immediately cease. All provisions of 
-                these Terms which by their nature should survive termination shall survive termination.
-              </p>
+            {/* Section 8 - Contact Information */}
+            <div className="bg-gray-50 rounded-xl p-6 mt-8">
+              <h2 className="text-xl font-bold text-gray-900 mb-4">8. Contact Information</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="flex items-start gap-3">
+                  <div className="text-purple-500 mt-1">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-500 mb-1">Address</p>
+                    <p className="text-gray-700 text-sm">A- 402 KPH COLONY, HYDERABAD,<br />Telangana, India - 500073</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-purple-500 mt-1">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-500 mb-1">Email</p>
+                    <p className="text-gray-700 text-sm">hr-manager@abcocomputers.com</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="text-purple-500 mt-1">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-500 mb-1">Phone</p>
+                    <p className="text-gray-700 text-sm">8247596534</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Privacy Policy Section */}
+          <div className="mt-16">
+            {/* Data Protection Badge */}
+            <div className="mb-6">
+              <span className="inline-block px-4 py-1 bg-purple-100 text-purple-600 text-sm font-medium rounded-full">
+                Data Protection
+              </span>
             </div>
 
-            {/* Section 11 */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Changes to Terms</h2>
-              <p className="text-gray-600 leading-relaxed">
-                We reserve the right to modify or replace these Terms at any time at our sole discretion. If a 
-                revision is material, we will provide at least 30 days' notice prior to any new terms taking 
-                effect. What constitutes a material change will be determined at our sole discretion.
-              </p>
-            </div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Privacy Policy</h2>
+            <p className="text-gray-500 mb-6">Last Updated: October 24, 2023</p>
 
-            {/* Section 12 */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">12. Governing Law</h2>
-              <p className="text-gray-600 leading-relaxed">
-                These Terms shall be governed by and construed in accordance with the laws of India, without 
-                regard to its conflict of law provisions. Any disputes arising out of or in connection with 
-                these Terms shall be subject to the exclusive jurisdiction of the courts located in the 
-                jurisdiction where TrillionApp Technologies is headquartered.
-              </p>
-            </div>
+            <p className="text-gray-600 leading-relaxed mb-8">
+              At Trillion Apps Technology, we value your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and safeguard your information.
+            </p>
 
-            {/* Section 13 */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">13. Contact Information</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                If you have any questions about these Terms, please contact us at:
-              </p>
-              <div className="bg-gray-50 rounded-xl p-6 mt-4">
-                <p className="text-gray-700 mb-2"><strong>Email:</strong> legal@trillionapp.com</p>
-                <p className="text-gray-700 mb-2"><strong>Phone:</strong> +91 9876543210</p>
-                <p className="text-gray-700"><strong>Address:</strong> 123 Business Street, Tech City, India 123456</p>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">1. Information We Collect</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We collect information you provide directly to us, such as your name, email address, phone number, and project details when you request a quote or contact us.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">2. How We Use Your Information</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Your information is used to provide, maintain, and improve our services, communicate with you about your projects, and send you technical notices or administrative messages.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">3. Information Protection</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We implement industry-standard security measures to maintain the safety of your personal information when you enter, submit, or access your data.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">4. Sharing of Information</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We do not sell, trade, or otherwise transfer your personal information to outside parties except to provide requested services or when required by law.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">5. Cookies</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Our website uses cookies to enhance user experience and gather data about site traffic and interaction so that we can offer better site experiences in the future.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">6. Third-Party Links</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Occasionally, we may include links to third-party websites. These sites have separate and independent privacy policies. We have no responsibility for the content of these linked sites.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">7. Your Rights</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  You have the right to access, update, or delete the personal information we have on you. Please contact us if you wish to exercise these rights.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">8. Updates</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page.
+                </p>
               </div>
             </div>
           </div>
