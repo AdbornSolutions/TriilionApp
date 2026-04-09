@@ -6,6 +6,7 @@ import logo from "../assets/logo/Trillion Apps tech (1) 1.png";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
@@ -23,18 +24,24 @@ const Navbar = () => {
     { name: "Mobile App Development", path: "/services/mobile-app" },
   ];
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setIsMobileServicesOpen(false);
+  }, [location]);
+
   return (
   <nav className="fixed w-full top-0 z-50" style={{ background: '#1a1a2e' }}>
     
-    <div className="max-w-xxl mx-auto flex items-stretch">
+    <div className="max-w-7xl mx-auto flex items-stretch">
 
       {/* LEFT SIDE LOGO */}
-      <div className="flex items-center px-6">
+      <div className="flex items-center px-4 md:px-6 py-2">
         <Link to="/">
           <img
             src={logo}
             alt="Trillion Apps Logo"
-            className="h-14 w-auto object-contain"
+            className="h-10 md:h-14 w-auto object-contain"
           />
         </Link>
       </div>
@@ -44,33 +51,34 @@ const Navbar = () => {
 
         {/* ── TOP BAR ── */}
         <div
-          className="flex items-center text-sm w-full"
+          className="hidden lg:flex items-center text-sm w-full"
           style={{ background: '#12121f' }}
         >
           {/* Email + Timing - Left Side */}
-          <div className="flex items-center gap-6 px-6 py-3 flex-wrap">
+          <div className="flex items-center gap-4 xl:gap-6 px-4 xl:px-6 py-2 xl:py-3">
             
-            <div className="flex items-center gap-2 text-[#bbb]">
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <div className="flex items-center gap-2 text-[#bbb] text-xs xl:text-sm">
+              <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <rect x="2" y="4" width="20" height="16" rx="2" />
                 <path d="M2 7l10 7 10-7" />
               </svg>
-              manager@trillionappstechnology.com
+              <span className="hidden xl:inline">manager@trillionappstechnology.com</span>
+              <span className="xl:hidden">manager@trillionapp...</span>
             </div>
 
-            <div className="flex items-center gap-2 text-[#bbb]">
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <div className="flex items-center gap-2 text-[#bbb] text-xs xl:text-sm">
+              <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 6v6l4 2" />
               </svg>
-              Monday to Friday 9.00AM to 6.00PM
+              <span className="hidden md:inline">Mon-Fri 9AM-6PM</span>
             </div>
           </div>
 
           {/* Social Icons - Pushed to Far Right */}
           <div className="ml-auto flex items-center">
             <div
-              className="flex items-center top-0 gap-5 px-9 py-3"
+              className="flex items-center gap-3 xl:gap-5 px-4 xl:px-9 py-2 xl:py-3"
               style={{ background: '#6c5ce7' }}
             >
               {/* Facebook */}
@@ -95,13 +103,13 @@ const Navbar = () => {
                 </svg>
               </a>
               {/* Pinterest */}
-              <a href="#" className="text-white opacity-80 hover:opacity-100 transition-opacity">
+              <a href="#" className="text-white opacity-80 hover:opacity-100 transition-opacity hidden sm:block">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.16 1.22-5.16s-.31-.62-.31-1.55c0-1.45.84-2.54 1.89-2.54.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.48-.25 1.04.52 1.88 1.53 1.88 1.83 0 3.06-2.34 3.06-5.11 0-2.11-1.43-3.58-3.47-3.58-2.36 0-3.74 1.77-3.74 3.6 0 .71.27 1.47.62 1.89.07.08.08.15.06.23l-.23.95c-.04.14-.12.17-.28.1-1.05-.49-1.7-2.02-1.7-3.25 0-2.64 1.92-5.07 5.53-5.07 2.9 0 5.15 2.07 5.15 4.83 0 2.88-1.81 5.19-4.33 5.19-.85 0-1.64-.44-1.91-.96l-.52 1.94c-.19.72-.7 1.62-1.04 2.17.78.24 1.6.37 2.45.37 5.52 0 10-4.48 10-10S17.52 2 12 2z" />
                 </svg>
               </a>
               {/* X / Twitter */}
-              <a href="#" className="text-white opacity-80 hover:opacity-100 transition-opacity">
+              <a href="#" className="text-white opacity-80 hover:opacity-100 transition-opacity hidden sm:block">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
@@ -112,10 +120,10 @@ const Navbar = () => {
 
 
         {/* ── NAVIGATION BAR ── */}
-        <div className="flex justify-between items-center px-6 py-3">
+        <div className="flex justify-between items-center px-4 md:px-6 py-2 md:py-3">
 
-          {/* Navigation Links */}
-          <div className="hidden md:flex items-center gap-12 ">
+          {/* Desktop Navigation Links */}
+          <div className="hidden md:flex items-center gap-6 lg:gap-12">
 
             {navLinks.map((link) => (
               <div key={link.name} className="relative">
@@ -126,7 +134,7 @@ const Navbar = () => {
                       to="/services"
                       className="flex items-center gap-1 font-medium"
                       style={{
-                        fontSize: '18px',
+                        fontSize: '16px',
                         color: location.pathname.includes('/services') ? '#a78bfa' : '#ccc',
                       }}
                       onMouseEnter={() => setIsServicesDropdownOpen(true)}
@@ -140,7 +148,7 @@ const Navbar = () => {
 
                     {isServicesDropdownOpen && (
                       <div
-                        className="absolute top-full mt-3 rounded-xl py-1.5"
+                        className="absolute top-full mt-3 rounded-xl py-1.5 z-50"
                         style={{
                           background: '#1e1e32',
                           border: '1px solid #2e2e4a',
@@ -168,7 +176,7 @@ const Navbar = () => {
                     to={link.path}
                     className="font-medium"
                     style={{
-                      fontSize: '18px',
+                      fontSize: '16px',
                       color: location.pathname === link.path ? '#a78bfa' : '#ccc'
                     }}
                   >
@@ -181,19 +189,109 @@ const Navbar = () => {
 
           </div>
 
-          {/* Contact Button */}
+          {/* Desktop Contact Button */}
           <Link
             to="/contact"
-            className="hidden md:block font-semibold text-white px-6 py-3 rounded-lg"
+            className="hidden md:block font-semibold text-white px-4 lg:px-6 py-2 lg:py-3 rounded-lg"
             style={{ 
               background: '#6c5ce7',
-              fontSize: '18px'
+              fontSize: '16px'
             }}
           >
             Contact Us
           </Link>
 
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-white p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? (
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div 
+            className="md:hidden absolute top-full left-0 right-0 z-50"
+            style={{ background: '#1a1a2e', borderTop: '1px solid #2e2e4a' }}
+          >
+            <div className="px-4 py-4 space-y-2">
+              {navLinks.map((link) => (
+                <div key={link.name}>
+                  {link.name === 'Services' ? (
+                    <div>
+                      <button
+                        className="w-full flex items-center justify-between py-3 font-medium"
+                        style={{
+                          fontSize: '16px',
+                          color: location.pathname.includes('/services') ? '#a78bfa' : '#ccc',
+                        }}
+                        onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                      >
+                        <span>Services</span>
+                        <svg 
+                          className={`w-4 h-4 transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} 
+                          viewBox="0 0 24 24" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="2.5"
+                        >
+                          <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                      </button>
+                      
+                      {isMobileServicesOpen && (
+                        <div className="pl-4 space-y-1">
+                          {servicesLinks.map((service) => (
+                            <Link
+                              key={service.name}
+                              to={service.path}
+                              className="block py-2 text-[#bbb] hover:text-white"
+                              style={{ fontSize: '14px' }}
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={link.path}
+                      className="block py-3 font-medium"
+                      style={{
+                        fontSize: '16px',
+                        color: location.pathname === link.path ? '#a78bfa' : '#ccc'
+                      }}
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+              
+              {/* Mobile Contact Button */}
+              <Link
+                to="/contact"
+                className="block w-full text-center font-semibold text-white px-4 py-3 rounded-lg mt-4"
+                style={{ background: '#6c5ce7', fontSize: '16px' }}
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        )}
 
       </div>
     </div>
