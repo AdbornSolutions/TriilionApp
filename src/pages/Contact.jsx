@@ -20,19 +20,36 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
-    alert('Thank you for contacting us! We will get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: '',
-    });
-  };
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbzbn9uQX20nl-iU1P_0fD2Se-KQn0pEicx19A7l_T0dBTRRkd2GO0GOJtAwh12895yFDw/exec",
+      {
+        method: "POST",
+        body: JSON.stringify(formData),
+      }
+    );
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+    } else {
+      alert("Something went wrong");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Error sending message");
+  }
+};
 
   return (
     <MainLayout>
