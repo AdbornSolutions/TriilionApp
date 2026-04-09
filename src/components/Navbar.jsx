@@ -130,21 +130,33 @@ const Navbar = () => {
 
                 {link.name === 'Services' ? (
                   <>
-                    <Link
-                      to="/services"
-                      className="flex items-center gap-1 font-medium"
-                      style={{
-                        fontSize: '16px',
-                        color: location.pathname.includes('/services') ? '#a78bfa' : '#ccc',
-                      }}
-                      onMouseEnter={() => setIsServicesDropdownOpen(true)}
-                      onMouseLeave={() => setIsServicesDropdownOpen(false)}
-                    >
-                      Services
-                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <path d="M6 9l6 6 6-6"/>
-                      </svg>
-                    </Link>
+                    <div className="flex items-center gap-1">
+                      <Link
+                        to="/services"
+                        className="font-medium"
+                        style={{
+                          fontSize: '16px',
+                          color: location.pathname.includes('/services') ? '#a78bfa' : '#ccc',
+                        }}
+                      >
+                        Services
+                      </Link>
+                      <button
+                        className="p-1"
+                        onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                        style={{ color: location.pathname.includes('/services') ? '#a78bfa' : '#ccc' }}
+                      >
+                        <svg 
+                          className={`w-4 h-4 transition-transform ${isServicesDropdownOpen ? 'rotate-180' : ''}`} 
+                          viewBox="0 0 24 24" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="2.5"
+                        >
+                          <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                      </button>
+                    </div>
 
                     {isServicesDropdownOpen && (
                       <div
@@ -154,8 +166,6 @@ const Navbar = () => {
                           border: '1px solid #2e2e4a',
                           minWidth: 210
                         }}
-                        onMouseEnter={() => setIsServicesDropdownOpen(true)}
-                        onMouseLeave={() => setIsServicesDropdownOpen(false)}
                       >
                         {servicesLinks.map((service) => (
                           <Link
@@ -163,6 +173,7 @@ const Navbar = () => {
                             to={service.path}
                             className="block px-4 py-2 text-[#bbb] hover:text-white hover:bg-[#2a2a44]"
                             style={{ fontSize: '15px' }}
+                            onClick={() => setIsServicesDropdownOpen(false)}
                           >
                             {service.name}
                           </Link>
