@@ -1,8 +1,6 @@
 import MainLayout from '../layouts/MainLayout';
 import HeroSection from '../components/HeroSection';
 import SectionTitle from '../components/SectionTitle';
-import { FeatureCard, TestimonialCard } from '../components/Cards';
-import { whyChooseUs, testimonials } from '../data/data.jsx';
 import heroBg from '../assets/hero section/about-services-blog-contactus pages/ea708e963f94370a51861237163c2b9c4513b203.jpg';
 import MainServicesSection from '../components/MainServicesSection';
 import OurProcess from '../assets/Frame 121.png';
@@ -24,7 +22,7 @@ const Services = () => {
       <MainServicesSection />
 
       {/* Working Process Timeline */}
-      <section className="py-20 bg-white">
+      <section className="py-14 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
           {/* LEFT — Text Content */}
             {/* Eyebrow */}
@@ -39,11 +37,11 @@ const Services = () => {
             subtitle="A proven methodology for successful project delivery"
           />
         </div>
-        <div className="w-full mt-3">
+        <div className="w-full mt-3 overflow-x-auto">
           <img 
             src={OurProcess} 
             alt="Our Working Process" 
-            className="w-full h-auto"
+            className="min-w-[720px] sm:min-w-0 sm:w-full h-auto"
           />
         </div>
       </section>

@@ -44,7 +44,7 @@ export const StatCard = ({ number, label, icon }) => {
           {icon}
         </div>
       )}
-      <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent mb-2">
+      <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent mb-2">
         {number}
       </div>
       <div className="text-gray-600 font-medium">{label}</div>

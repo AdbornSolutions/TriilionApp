@@ -27,9 +27,9 @@ const About = () => {
       <AboutSection/>
 
       {/* Vision, Mission, Goals Images */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {/* Vision */}
             <div className="relative group">
               <img 
@@ -37,9 +37,9 @@ const About = () => {
                 alt="Vision" 
                 className="w-full h-auto object-cover rounded-lg"
               />
-              <div className="absolute inset-0 rounded-lg flex flex-col justify-center items-center p-6  ">
-                <h3 className="text-[#8A38F5] text-2xl  font-bold mb-2">Our Vision</h3>
-                <p className="text-black/90 text-16px text-center">
+              <div className="absolute inset-0 rounded-lg flex flex-col justify-center items-center p-4 sm:p-6">
+                <h3 className="text-[#8A38F5] text-xl sm:text-2xl font-bold mb-2">Our Vision</h3>
+                <p className="text-black/90 text-sm sm:text-base text-center">
 To be a leading provider of cutting-edge technology solutions, driving business growth and transformation globally.                </p>
               </div>
             </div>
@@ -51,23 +51,23 @@ To be a leading provider of cutting-edge technology solutions, driving business 
                 alt="Mission" 
                 className="w-full h-auto object-cover rounded-lg"
               />
-              <div className="absolute inset-0 rounded-lg flex flex-col justify-center items-center p-6  ">
-                <h3 className="text-[#8A38F5] text-2xl  font-bold mb-2">Our Mission</h3>
-                <p className="text-black/90 text-16px text-center">
+              <div className="absolute inset-0 rounded-lg flex flex-col justify-center items-center p-4 sm:p-6">
+                <h3 className="text-[#8A38F5] text-xl sm:text-2xl font-bold mb-2">Our Mission</h3>
+                <p className="text-black/90 text-sm sm:text-base text-center">
 To empower businesses with innovative and reliable mobile application development, ERP development, digital marketing, and web design solutions.                </p>
               </div>
             </div>
 
             {/* Goals */}
-            <div className="relative group">
+            <div className="relative group sm:col-span-2 lg:col-span-1">
               <img 
                 src={goalsImg} 
                 alt="Goals" 
                 className="w-full h-auto object-cover rounded-lg"
               />
-              <div className="absolute inset-0 rounded-lg flex flex-col justify-center items-center p-6  ">
-                <h3 className="text-[#8A38F5] text-2xl  font-bold mb-2">Our Goals</h3>
-                <p className="text-black/90 text-16px text-center">
+              <div className="absolute inset-0 rounded-lg flex flex-col justify-center items-center p-4 sm:p-6">
+                <h3 className="text-[#8A38F5] text-xl sm:text-2xl font-bold mb-2">Our Goals</h3>
+                <p className="text-black/90 text-sm sm:text-base text-center">
 Offer result-oriented digital marketing strategies to maximize online visibility, brand awareness, and customer engagement.                </p>
               </div>
             </div>

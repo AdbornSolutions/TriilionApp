@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import HeroSection from '../components/HeroSection';
 import SectionTitle from '../components/SectionTitle';
-
+import heroBg from '../assets/hero section/home page/8731ebdc3c6d444ea23d0f3d4d6457dbc9de897b.jpg';
 const ServiceDetail = ({ service }) => {
   return (
     <MainLayout>
@@ -10,15 +10,15 @@ const ServiceDetail = ({ service }) => {
       <HeroSection
         title={service.title}
         subtitle={`Professional ${service.title.toLowerCase()} services for your business`}
-        backgroundImage={service.image}
+        backgroundImage={heroBg}
         ctaText="Get Started"
         ctaLink="/contact"
       />
 
       {/* Description Section */}
-      <section className="py-20 bg-white">
+      <section className="py-14 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid gap-10 md:grid-cols-2 lg:gap-12 items-center">
             <div>
               <SectionTitle
                 title={`About ${service.title}`}
@@ -69,7 +69,7 @@ const ServiceDetail = ({ service }) => {
       </section>
 
       {/* Features Grid */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-14 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title={`Why Choose Our ${service.title}?`}
@@ -94,17 +94,17 @@ const ServiceDetail = ({ service }) => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-700">
+      <section className="py-14 sm:py-16 bg-gradient-to-r from-indigo-600 to-purple-700">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Start Your Project?
           </h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-base sm:text-xl text-white/90 mb-8">
             Let's discuss how we can help you achieve your goals
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-white text-purple-600 px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            className="inline-block bg-white text-purple-600 px-7 sm:px-10 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
           >
             Contact Us Today
           </Link>

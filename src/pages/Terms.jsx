@@ -14,7 +14,7 @@ const Terms = () => {
       />
 
       {/* Terms Content */}
-      <section className="py-20 bg-white">
+      <section className="py-14 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Terms & Conditions"
@@ -25,7 +25,7 @@ const Terms = () => {
           <div className="prose prose-lg max-w-none">
             {/* Section 1 */}
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 By accessing and using the services of TrillionApp Technologies ("we," "us," or "our"), 
                 you accept and agree to be bound by these Terms and Conditions ("Terms"). If you do not 

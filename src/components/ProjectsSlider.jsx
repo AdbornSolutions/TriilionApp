@@ -26,13 +26,13 @@ const ProjectsSlider = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-10 flex justify-between items-start gap-10">
+        <div className="mb-10 flex flex-col gap-5 md:flex-row md:items-start md:justify-between md:gap-10">
           <div className="flex-1">
             <p className="text-purple-500 uppercase tracking-wider text-xs">-- Our Completed Projects --</p>
-            <h2 className="text-3xl font-bold mt-2 text-justify">Improve & Enhance <br/>Our Tech Projects</h2>
+            <h2 className="text-3xl font-bold mt-2">Improve & Enhance <br/>Our Tech Projects</h2>
           </div>
           <div className="flex-1">
-            <p className="text-gray-600 text-right leading-relaxed mb-0 text-xs mt-9">
+            <p className="text-gray-600 leading-relaxed mb-0 text-xs md:mt-9 md:text-right">
               There are various successful projects from IT strategy consulting to the end-to-end development of scalable solutions made by our creative and experienced IT professionals.
             </p>
           </div>

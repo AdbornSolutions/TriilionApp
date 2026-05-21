@@ -5,7 +5,7 @@ import coreValueBg from '../assets/hero section/about-services-blog-contactus pa
 const OurCoreValues = () => {
   return (
     <section 
-      className="py-20 relative overflow-hidden"
+      className="py-14 sm:py-16 lg:py-20 relative overflow-hidden"
       style={{
         backgroundImage: `url(${coreValueBg})`,
         backgroundSize: 'cover',
@@ -14,7 +14,7 @@ const OurCoreValues = () => {
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 justify-center items-center">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <p
             style={{
               color: "#9333ea",
@@ -28,7 +28,7 @@ const OurCoreValues = () => {
           </p>
           <h2
             style={{
-              fontSize: 38,
+              fontSize: 'clamp(28px, 7vw, 38px)',
               fontWeight: 800,
               color: "#0f0a1e",
               lineHeight: 1.25,

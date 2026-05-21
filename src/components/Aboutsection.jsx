@@ -7,14 +7,14 @@ const AboutSection = () => {
   return (
     <section className="bg-white overflow-hidden">
       {/* ── MAIN CONTENT ── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-20">
+        <div className="grid gap-10 md:grid-cols-2 lg:gap-16 items-center">
           {/* LEFT — Single Image */}
           <div className="flex items-center justify-center">
             <img
               src={newImage}
               alt="About Company"
-              className="w-full h-auto object-contain max-h-[500px]"
+              className="w-full max-w-md md:max-w-none h-auto object-contain max-h-[500px]"
             />
           </div>
 

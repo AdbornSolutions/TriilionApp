@@ -24,21 +24,23 @@ const WhyChooseUs = () => {
       { threshold: 0.2 }
     );
 
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
+    const imageNode = imageRef.current;
+
+    if (imageNode) {
+      observer.observe(imageNode);
     }
 
     return () => {
-      if (imageRef.current) {
-        observer.unobserve(imageRef.current);
+      if (imageNode) {
+        observer.unobserve(imageNode);
       }
     };
   }, []);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-14 sm:py-16 lg:py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid gap-10 md:grid-cols-2 lg:gap-16 items-center">
 
           {/* LEFT — Text Content */}
           <div>
@@ -53,7 +55,7 @@ const WhyChooseUs = () => {
             {/* Heading */}
             <h2
               style={{
-                fontSize: 30,
+                fontSize: 'clamp(28px, 7vw, 30px)',
                 fontWeight: 800,
                 color: '#0f0a1e',
                 lineHeight: 1.3,

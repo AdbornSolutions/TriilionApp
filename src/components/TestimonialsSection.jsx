@@ -85,7 +85,7 @@ const TestimonialsSlider = () => {
 
       <section
         className="relative overflow-hidden"
-        style={{ backgroundColor: "#eeebf5", paddingTop: 80, paddingBottom: 80 }}
+        style={{ backgroundColor: "#eeebf5", paddingTop: "clamp(56px, 10vw, 80px)", paddingBottom: "clamp(56px, 10vw, 80px)" }}
       >
         {/* Dotted bg overlay */}
         <div
@@ -128,7 +128,7 @@ const TestimonialsSlider = () => {
 
         <div className="relative z-10">
           {/* Heading */}
-          <div className="text-center mb-16 px-4">
+          <div className="text-center mb-10 px-4 sm:mb-16">
             <p
               style={{
                 color: "#9333ea",
@@ -142,7 +142,7 @@ const TestimonialsSlider = () => {
             </p>
             <h2
               style={{
-                fontSize: 38,
+                fontSize: "clamp(28px, 7vw, 38px)",
                 fontWeight: 800,
                 color: "#0f0a1e",
                 lineHeight: 1.25,
@@ -188,20 +188,20 @@ const TestimonialsSlider = () => {
                       background: "#fff",
                       borderRadius: 10,
                       boxShadow: "0 4px 24px rgba(100,80,160,0.10)",
-                      padding: "24px 28px 32px",
+                      padding: "24px clamp(18px, 5vw, 28px) 32px",
                       minHeight: 220,
                     }}
                   >
                     {/* Avatar + Name pill — overlapping top */}
                     <div
                       className="absolute flex items-center"
-                      style={{ top: -44, left: 20 }}
+                      style={{ top: -44, left: "clamp(12px, 4vw, 20px)" }}
                     >
                       {/* Avatar */}
                       <div
                         style={{
-                          width: 78,
-                          height: 78,
+                          width: "clamp(64px, 18vw, 78px)",
+                          height: "clamp(64px, 18vw, 78px)",
                           borderRadius: "50%",
                           overflow: "hidden",
                           border: "3px solid #a78bfa",
@@ -222,11 +222,11 @@ const TestimonialsSlider = () => {
                         style={{
                           background: "#fff",
                           borderRadius: "0 24px 24px 0",
-                          padding: "10px 20px 10px 16px",
+                          padding: "10px clamp(14px, 4vw, 20px) 10px 16px",
                           marginLeft: -8,
                           boxShadow: "0 2px 12px rgba(100,80,160,0.12)",
                           borderBottom: "3px solid #7c3aed",
-                          minWidth: 150,
+                          minWidth: "min(150px, calc(100vw - 130px))",
                         }}
                       >
                         <div
@@ -254,7 +254,7 @@ const TestimonialsSlider = () => {
                     {/* Stars — top right */}
                     <div
                       className="absolute flex gap-0.5"
-                      style={{ top: 20, right: 20 }}
+                      style={{ top: 18, right: 16 }}
                     >
                       {[...Array(5)].map((_, i) => (
                         <svg
@@ -272,7 +272,7 @@ const TestimonialsSlider = () => {
                     {/* Testimonial text */}
                     <p
                       style={{
-                        marginTop: 48,
+                        marginTop: 56,
                         color: "#374151",
                         fontSize: 14,
                         lineHeight: 1.75,

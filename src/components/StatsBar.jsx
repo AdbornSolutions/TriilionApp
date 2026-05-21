@@ -32,13 +32,15 @@ const AnimatedCounter = ({ end, suffix = '+' }) => {
       { threshold: 0.5 }
     );
 
-    if (counterRef.current) {
-      observer.observe(counterRef.current);
+    const counterNode = counterRef.current;
+
+    if (counterNode) {
+      observer.observe(counterNode);
     }
 
     return () => {
-      if (counterRef.current) {
-        observer.unobserve(counterRef.current);
+      if (counterNode) {
+        observer.unobserve(counterNode);
       }
     };
   }, [end, hasAnimated]);
@@ -61,13 +63,11 @@ const StatsBar = () => {
   return (
     <div className="w-full py-8 px-4" style={{ background: '#f8f8f8' }}>
       <div
-        className="max-w-6xl mx-auto  relative overflow-hidden"
+        className="max-w-6xl mx-auto relative grid grid-cols-2 gap-y-8 overflow-hidden md:grid-cols-4"
         style={{
           background: '#7c3aed',
           borderRadius: '0px 19px 0px 19px',
-          padding: '28px 40px',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
+          padding: '28px clamp(16px, 5vw, 40px)',
         }}
       >
         {/* Decorative diamond shapes */}
@@ -94,10 +94,9 @@ const StatsBar = () => {
         {stats.map((stat, i) => (
           <div
             key={stat.label}
-            className="text-center relative z-10"
-            style={i < stats.length - 1 ? {
-              borderRight: '1px solid rgba(255,255,255,0.2)',
-            } : {}}
+            className={`relative z-10 px-2 text-center ${
+              i % 2 === 0 ? 'border-r border-white/20 md:border-r' : ''
+            } ${i < stats.length - 1 ? 'md:border-r md:border-white/20' : 'md:border-r-0'}`}
           >
             <p
               className="text-xs font-semibold uppercase tracking-widest mb-2"
@@ -105,7 +104,7 @@ const StatsBar = () => {
             >
               {stat.label}
             </p>
-            <p className="text-4xl font-bold text-white">
+            <p className="text-3xl font-bold text-white sm:text-4xl">
               <AnimatedCounter end={stat.value} suffix={stat.suffix} />
             </p>
           </div>

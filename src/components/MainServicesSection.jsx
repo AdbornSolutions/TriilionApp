@@ -10,7 +10,7 @@ const MainServicesSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative py-24 bg-[#eeebf5] overflow-hidden">
+    <section className="relative overflow-hidden bg-[#eeebf5] py-14 sm:py-16 lg:py-24">
 
       {/* dotted background */}
       <div
@@ -22,10 +22,10 @@ const MainServicesSection = () => {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Heading */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <div className="flex items-center justify-center gap-2 mb-3">
             <span className="w-5 h-[1px] bg-purple-600"></span>
             <p className="text-purple-600 text-xs font-semibold tracking-wider uppercase">
@@ -33,13 +33,13 @@ const MainServicesSection = () => {
             </p>
           </div>
 
-          <h2 className="text-4xl font-extrabold text-[#0f0a1e] leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f0a1e] leading-tight">
             We Offer a Wide <br />
             Variety of IT Services
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid gap-10 md:grid-cols-2 lg:gap-16 items-center">
 
           {/* LEFT SERVICES */}
           <div className="flex flex-col gap-4">
@@ -52,7 +52,7 @@ const MainServicesSection = () => {
                 <button
                   key={service.id}
                   onClick={() => setSelectedService(service)}
-                  className={`flex items-center gap-4 px-6 py-4 text-left transition-all border rounded
+                  className={`flex w-full items-center gap-4 px-4 py-4 text-left transition-all border rounded sm:px-6
                   ${active 
                     ? "border-purple-600 bg-white shadow-sm"
                     : "border-gray-200 bg-white hover:border-purple-300"
@@ -60,7 +60,7 @@ const MainServicesSection = () => {
                 >
 
                   {/* Icon */}
-                  <div className="w-11 h-11 flex items-center justify-center border border-purple-200 rounded text-purple-600 text-xl">
+                  <div className="w-11 h-11 flex flex-shrink-0 items-center justify-center border border-purple-200 rounded text-purple-600 text-xl">
                     {service.icon}
                   </div>
 
@@ -75,18 +75,18 @@ const MainServicesSection = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative">
+          <div className="relative pb-0 md:pb-10">
 
             {/* Image */}
             <img
               src={heroBg}
               alt={selectedService.title}
-              className="w-[95%] rounded-md object-cover mx-auto"
+              className="w-full rounded-md object-cover mx-auto md:w-[95%]"
             />
 
             {/* INFO CARD + ARROW BUTTON WRAPPER */}
             <div
-              className="absolute -bottom-6 right-12 w-[65%] group cursor-pointer"
+              className="group relative mt-4 w-full cursor-pointer md:absolute md:-bottom-6 md:right-8 md:mt-0 md:w-[70%] lg:right-12 lg:w-[65%]"
               onMouseEnter={(e) => {
                 // Info card hover effect
                 e.currentTarget.querySelector('.hover-bg').style.top = '0';
@@ -108,7 +108,7 @@ const MainServicesSection = () => {
             >
               {/* INFO CARD */}
               <div 
-                className="bg-white shadow-xl p-5 border-l-4 border-purple-600 relative overflow-hidden"
+                className="bg-white shadow-xl p-4 sm:p-5 border-l-4 border-purple-600 relative overflow-hidden"
               >
                 {/* Hover Background - slides from bottom to top */}
                 <div
@@ -134,7 +134,7 @@ const MainServicesSection = () => {
               {/* Arrow Button */}
               <button
                 onClick={() => navigate(`/services/${selectedService.id}`)}
-                className="arrow-btn absolute -top-8 right-4 w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center shadow-lg transition-all duration-500 z-10"
+                className="arrow-btn absolute -top-6 right-4 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-purple-600 shadow-lg transition-all duration-500 sm:h-12 sm:w-12 md:-top-8"
               >
                 <svg
                   width="18"

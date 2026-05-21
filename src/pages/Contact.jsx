@@ -2,6 +2,7 @@ import { useState } from 'react';
 import MainLayout from '../layouts/MainLayout';
 import HeroSection from '../components/HeroSection';
 import SectionTitle from '../components/SectionTitle';
+import heroBg from '../assets/hero section/home page/8731ebdc3c6d444ea23d0f3d4d6457dbc9de897b.jpg';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -39,11 +40,11 @@ const Contact = () => {
       <HeroSection
         title="Get In Touch"
         subtitle="We'd love to hear from you. Let's discuss your project!"
-        backgroundImage="/assets/contact-hero.jpg"
+        backgroundImage={heroBg}
       />
 
       {/* Contact Form & Info */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-14 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Contact Us"
@@ -53,7 +54,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-8">
+              <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-5 sm:p-8">
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -151,8 +152,8 @@ const Contact = () => {
 
             {/* Contact Information */}
             <div className="space-y-6">
-              <div className="bg-white rounded-2xl shadow-xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+              <div className="bg-white rounded-2xl shadow-xl p-5 sm:p-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
                 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
@@ -194,18 +195,18 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl shadow-xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Business Hours</h3>
+              <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl shadow-xl p-5 sm:p-8 text-white">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4">Business Hours</h3>
                 <div className="space-y-3">
-                  <div className="flex justify-between">
+                  <div className="flex flex-col gap-1 sm:flex-row sm:justify-between">
                     <span>Monday - Friday:</span>
                     <span className="font-semibold">9:00 AM - 6:00 PM</span>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex flex-col gap-1 sm:flex-row sm:justify-between">
                     <span>Saturday:</span>
                     <span className="font-semibold">10:00 AM - 4:00 PM</span>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex flex-col gap-1 sm:flex-row sm:justify-between">
                     <span>Sunday:</span>
                     <span className="font-semibold">Closed</span>
                   </div>

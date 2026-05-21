@@ -15,9 +15,9 @@ const FooterCTA = () => {
     >
 
       {/* Content */}
-      <div className="relative z-10 py-20 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 py-14 text-center sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <p className="text-white text-lg mb-4">We’re here to help to grow your business.</p>
-        <h1 className="text-white text-4xl sm:text-5xl font-bold mb-6">
+        <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
           Looking for the Best IT Business Solutions?
         </h1>
         <button

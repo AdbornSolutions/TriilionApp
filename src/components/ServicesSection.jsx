@@ -16,17 +16,17 @@ const ServicesSection = () => {
       <section className="relative">
 
         {/* TOP LIGHT BACKGROUND */}
-        <div className="bg-gray-100 h-56"></div>
+        <div className="hidden h-56 bg-gray-100 md:block"></div>
 
         {/* FLOATING CARDS */}
-<div className="absolute left-0 right-0 top-1 z-20">
+<div className="relative z-20 bg-gray-100 py-10 md:absolute md:left-0 md:right-0 md:top-1 md:bg-transparent md:py-0">
   <div className="max-w-5xl mx-auto px-4">
-    <div className="grid md:grid-cols-3 gap-8">
+    <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
 
       {[card1, card2, card3].map((img, i) => (
         <div
           key={i}
-          className="group"
+          className="group sm:last:col-span-2 md:last:col-span-1"
           style={{
             borderRadius: 0,
             boxShadow: '0 8px 32px rgba(0,0,0,0.35)',
@@ -63,7 +63,7 @@ const ServicesSection = () => {
               src={img}
               style={{
                 width: '100%',
-                height: 220,
+                height: 'clamp(190px, 48vw, 220px)',
                 objectFit: 'cover',
                 display: 'block',
               }}
@@ -103,7 +103,7 @@ const ServicesSection = () => {
                 color: '#0f0a1e',
                 fontWeight: 700,
                 fontSize: 14,
-                padding: '10px 59px',
+                padding: '10px clamp(24px, 8vw, 59px)',
                 whiteSpace: 'nowrap',
                 boxShadow: '0 2px 12px rgba(0,0,0,0.20)',
                 zIndex: 1,
@@ -128,7 +128,7 @@ const ServicesSection = () => {
 </div>
 
         {/* PURPLE SECTION */}
-        <div className="relative bg-[#1a0f2e] pt-40 pb-24 overflow-hidden">
+        <div className="relative bg-[#1a0f2e] pt-14 pb-16 sm:pt-16 sm:pb-20 md:pt-40 md:pb-24 overflow-hidden">
 
           {/* dotted bg layer 1 */}
           <div
@@ -152,17 +152,17 @@ const ServicesSection = () => {
             }}
           ></div>
 
-          <div className="relative max-w-6xl mx-auto px-6">
+          <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
 
             {/* heading row */}
-            <div className="grid md:grid-cols-2 gap-12 text-white mb-16">
+            <div className="grid gap-6 text-white mb-12 md:grid-cols-2 md:gap-12 md:mb-16">
 
               <div>
                 <p className="text-purple-400 text-sm mb-2">
                   What We're Offering
                 </p>
 
-                <h2 className="text-4xl font-bold leading-snug">
+                <h2 className="text-3xl sm:text-4xl font-bold leading-snug">
                   Dealing in all Professional <br /> IT Services
                 </h2>
               </div>
@@ -176,12 +176,12 @@ const ServicesSection = () => {
             </div>
 
            <div className="flex justify-center items-center mt-12">
-  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 ">
+  <div className="grid w-full grid-cols-1 gap-x-5 gap-y-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-8">
 
     {services.map((service) => (
       <div
         key={service.id}
-        className="relative text-center pt-14 pb-9 px-6"
+        className="relative text-center pt-14 pb-9 px-5"
         style={{
           background: '#1a0f2e',
           zIndex: 0,
@@ -282,7 +282,7 @@ const ServicesSection = () => {
       ></div>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-between px-12 py-10">
+      <div className="relative z-10 flex flex-col items-start gap-8 px-5 py-8 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-12 lg:py-10">
 
         {/* Left Circle Image */}
         <div className="hidden md:flex items-center">
@@ -296,28 +296,28 @@ const ServicesSection = () => {
         {/* Center Text */}
         <div className="text-white max-w-xl">
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
             We’re Ready Develop Your Site!
           </h2>
 
           <ul className="space-y-3">
 
-            <li className="flex items-center gap-3">
-              <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+            <li className="flex items-start gap-3">
+              <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-white/20">
                 ✓
               </span>
               <span>IT solutions are created by top experts</span>
             </li>
 
-            <li className="flex items-center gap-3">
-              <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+            <li className="flex items-start gap-3">
+              <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-white/20">
                 ✓
               </span>
               <span>Receive free consultation for any kind of IT solutions</span>
             </li>
 
-            <li className="flex items-center gap-3">
-              <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+            <li className="flex items-start gap-3">
+              <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-white/20">
                 ✓
               </span>
               <span>Support 24/7 for partners during the process.</span>

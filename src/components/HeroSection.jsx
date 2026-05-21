@@ -8,7 +8,7 @@ const HeroSection = ({
   overlay = true 
 }) => {
   return (
-    <section className="relative h-[700px] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[420px] sm:min-h-[520px] lg:min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 w-full h-full">
         {backgroundImage ? (
@@ -28,24 +28,24 @@ const HeroSection = ({
       )}
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto">
         {smallHeading && (
-          <h2 className="text-xl md:text-xl lg:text-xl  text-gray-300 mb-4  underline">
+          <h2 className="text-base sm:text-lg lg:text-xl text-gray-300 mb-4 underline">
             {smallHeading}
           </h2>
         )}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 sm:mb-6 leading-tight break-words">
           {title}
         </h1>
         {subtitle && (
-          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
             {subtitle}
           </p>
         )}
         {ctaText && ctaLink && (
           <a
             href={ctaLink}
-            className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
           >
             {ctaText}
           </a>
