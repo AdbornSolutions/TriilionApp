@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import HeroSection from '../components/HeroSection';
 import SectionTitle from '../components/SectionTitle';
-import heroBg from '../assets/hero section/home page/8731ebdc3c6d444ea23d0f3d4d6457dbc9de897b.jpg';
+
 const ServiceDetail = ({ service }) => {
   return (
     <MainLayout>

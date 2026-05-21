@@ -29,11 +29,11 @@ const blogPosts = [
 
 const BlogPreviewSection = () => {
   return (
-    <section className="py-14 sm:py-16 lg:py-20 bg-white">
+    <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
-        <div className="text-center mb-10 sm:mb-14">
+        <div className="text-center mb-14">
           <p
             style={{
               color: '#9333ea',
@@ -47,7 +47,7 @@ const BlogPreviewSection = () => {
           </p>
           <h2
             style={{
-              fontSize: 'clamp(28px, 7vw, 34px)',
+              fontSize: 34,
               fontWeight: 700,
               color: '#0f0a1e',
             }}
