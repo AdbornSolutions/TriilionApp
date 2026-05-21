@@ -17,7 +17,6 @@ import increaseIcon from '../assets/Digital marketing/tangible/increase.png';
 import leadsIcon from '../assets/Digital marketing/tangible/general.png';
 import conversionIcon from '../assets/Digital marketing/tangible/conversion.png';
 import teamIcon from '../assets/ERP/Expertise/Margin.png';
-import resultIcon from '../assets/Digital marketing/why us/result.png';
 /* ─── icon helpers (inline SVG so no extra dep needed) ─── */
 const Icon = ({ d, size = 30, color = '#7c3aed' }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none"

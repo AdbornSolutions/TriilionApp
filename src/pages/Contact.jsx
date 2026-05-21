@@ -2,6 +2,7 @@ import { useState } from 'react';
 import MainLayout from '../layouts/MainLayout';
 import HeroSection from '../components/HeroSection';
 import SectionTitle from '../components/SectionTitle';
+import heroBg from '../assets/hero section/about-services-blog-contactus pages/ea708e963f94370a51861237163c2b9c4513b203.jpg';
 
 const Contact = () => {
   const [formData, setFormData] = useState({

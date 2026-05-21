@@ -1,7 +1,6 @@
 import MainLayout from '../layouts/MainLayout';
 import HeroSection from '../components/HeroSection';
 import heroBg from '../assets/hero section/about-services-blog-contactus pages/ea708e963f94370a51861237163c2b9c4513b203.jpg';
-import { services } from '../data/data.jsx';
 import OurProcess from '../assets/Frame 121.png';
 import TestimonialsSlider from '../components/TestimonialsSection.jsx';
 import TeamImg from '../assets/team.png';
@@ -215,8 +214,6 @@ const WhyCard = ({ icon, title, desc }) => (
 
 /* ════════════════════════════════════════════════ */
 const MobileApp = () => {
-  const service = services.find(s => s.id === 'app-development');
-
   return (
     <MainLayout>
       {/* ── Hero ── */}

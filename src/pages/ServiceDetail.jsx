@@ -10,7 +10,7 @@ const ServiceDetail = ({ service }) => {
       <HeroSection
         title={service.title}
         subtitle={`Professional ${service.title.toLowerCase()} services for your business`}
-        backgroundImage={heroBg}
+        backgroundImage={service.image}
         ctaText="Get Started"
         ctaLink="/contact"
       />

@@ -123,7 +123,7 @@ export const blogPosts = [
     title: 'Top 10 Digital Marketing Trends in 2024',
     date: 'March 15, 2024',
     excerpt: 'Discover the latest digital marketing trends that will shape the industry this year.',
-    image: '/assets/blog-1.jpg',
+    image: 'src/assets/All/blog1.jpg',
     link: '/blog/top-10-digital-marketing-trends',
   },
   {
@@ -131,7 +131,7 @@ export const blogPosts = [
     title: 'Why Your Business Needs an ERP System',
     date: 'March 10, 2024',
     excerpt: 'Learn how ERP systems can streamline your business operations and boost productivity.',
-    image: '/assets/blog-2.jpg',
+    image: 'src/assets/All/blog2.jpg',
     link: '/blog/why-your-business-needs-erp',
   },
   {
@@ -139,7 +139,7 @@ export const blogPosts = [
     title: 'The Future of Mobile App Development',
     date: 'March 5, 2024',
     excerpt: 'Explore emerging technologies and trends in mobile app development.',
-    image: '/assets/blog-3.jpg',
+    image: 'src/assets/All/blog3.jpg',
     link: '/blog/future-of-mobile-app-development',
   },
 ];
